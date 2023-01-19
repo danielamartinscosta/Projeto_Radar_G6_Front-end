@@ -1,11 +1,11 @@
 .card {
-  border-left: 0.25rem solid #ff5510;
+  border-left: 2px solid #10ffa7;
 }
 
 .text-card {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #005400;
+  color: black;
 }
 
 .divChart {

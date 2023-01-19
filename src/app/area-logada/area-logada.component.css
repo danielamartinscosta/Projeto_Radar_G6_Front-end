@@ -1,5 +1,5 @@
-#wrapper {
-  background-color: #000;
+ul {
+  background-color: rgb(46, 139, 252);
 }
 .nav-item span {
   font-size: 1rem;
@@ -14,8 +14,8 @@ ul span {
 }
 
 .ativado {
-  color: #000;
-  background: linear-gradient(#ff7e49, #f14600);
+  
+  background: #669cf3;
   font-weight: 600;
 }
 
@@ -28,11 +28,8 @@ ul span {
 }
 
 li a:hover {
-  background: linear-gradient(#ff7e49, #f14600);
+  background: #669cf3;
   font-weight: 600;
 }
 
-.sair {
-  position: absolute;
-  top: 650px;
-}
+
