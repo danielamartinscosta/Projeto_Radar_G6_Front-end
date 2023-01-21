@@ -14,10 +14,10 @@
       </button>
     </div>
     <div *ngIf="!estaCarregando && !erroNoCarregamento">
-      <p><b>Nome:</b> {{ product.name }}</p>
-      <p><b>Descrição:</b> {{ product.description }}</p>
-      <p><b>Preço:</b> {{ product.price}}</p>
-      <p><b>Quantidade:</b> {{ product.quantity }}</p>
+      <p><b>Nome:</b> {{ product.nome }}</p>
+      <p><b>Descrição:</b> {{ product.descricao }}</p>
+      <p><b>Preço:</b> {{ product.valor}}</p>
+      <p><b>Quantidade:</b> {{ product.quantidadeEstoque }}</p>
       <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
     </div>
   </div>

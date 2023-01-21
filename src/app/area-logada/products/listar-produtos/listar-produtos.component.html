@@ -55,13 +55,13 @@
         <tbody>
           <tr *ngFor="let product of products">
             <td class="text-start align-middle pl-5" scope="row d-column">
-              <b>{{ product.name }}</b>
+              <b>{{ product.nome }}</b>
             </td>
-            <td class="align-middle pl-5 pr-5">{{ product.description }}</td>
+            <td class="align-middle pl-5 pr-5">{{ product.descricao }}</td>
             <td class="text-start align-middle pl-5 pr-5">
-              {{ product.price }}
+              {{ product.valor }}
             </td>
-            <td class="align-middle">{{ product.quantity }}</td>
+            <td class="align-middle">{{ product.quantidadeEstoque }}</td>
             <td class="d-flex align-middle justify-content-end">
               <button
                 class="btn btn-info ml-2 mr-2"

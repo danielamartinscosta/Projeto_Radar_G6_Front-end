@@ -93,7 +93,8 @@ export class HomeComponent implements OnInit {
   }
 
   countProducts() {
-    this.productService.pegarProduto().subscribe({
+    var token = this.authService.getToken();
+    this.productService.pegarProduto(token).subscribe({
       next: (resp) => this.onSuccessProducts(resp),
     });
   }

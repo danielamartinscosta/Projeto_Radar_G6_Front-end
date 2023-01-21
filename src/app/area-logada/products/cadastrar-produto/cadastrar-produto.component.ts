@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../product.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take, finalize } from 'rxjs';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -21,7 +22,8 @@ export class CadastrarProdutoComponent implements OnInit{
     private productsService: ProductsService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
     ) {}
 
     ngOnInit(): void {
@@ -35,10 +37,11 @@ export class CadastrarProdutoComponent implements OnInit{
 
     inicializaForm(){
       this.productForm = this.formBuilder.group({
-        name:['', Validators.required],
-        description:['',Validators.required],
-        price:['',Validators.required],
-        quantity:['',Validators.required]
+        id: [''],
+        nome:['', Validators.required],
+        descricao:['',Validators.required],
+        valor:['',Validators.required],
+        quantidadeEstoque:['',Validators.required]
       });
     }
 
@@ -61,8 +64,9 @@ export class CadastrarProdutoComponent implements OnInit{
 
       const idProduct = this.activatedRoute.snapshot.paramMap.get('id');
 
+      var token = this.authService.getToken();
       this.productsService
-        .pegarProdutoId(idProduct)
+        .pegarProdutoId(idProduct, token)
         .pipe(
           take(1),
           finalize(() => (this.estaCarregando = false))
@@ -102,8 +106,9 @@ export class CadastrarProdutoComponent implements OnInit{
   }
 
   salvarProduto(){
+    var token = this.authService.getToken();
     this.productsService
-      .alterarProduto(this.idProduct, this.productForm.value)
+      .alterarProduto(this.idProduct, this.productForm.value, token)
       .subscribe({
         next: () => this.onSucessoSalvarProduto(),
         error: () => this.onErroSalvarProduto(),
@@ -120,7 +125,8 @@ export class CadastrarProdutoComponent implements OnInit{
   };
 
   cadastrarProduto(){
-    this.productsService.cadastrarProduto(this.productForm.value).subscribe({
+    var token = this.authService.getToken();
+    this.productsService.cadastrarProduto(this.productForm.value, token).subscribe({
       next: () => this.onSucessoCadastrarProduto(),
       error: () => this.onErroCadastrarProduto(),
     });

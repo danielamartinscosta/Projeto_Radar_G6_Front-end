@@ -1,7 +1,7 @@
 import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/area-logada/products/product.interface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,24 +11,24 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
   
-  pegarProduto(){
-    return this.http.get<Product[]>(`${this.API_URL}/produtos`);
+  pegarProduto(token:string){
+    return this.http.get<Product[]>(`${this.API_URL}/produtos`, { headers: new HttpHeaders({authorization: `Bearer ${token}`})});
   }
 
-  pegarProdutoId(idProduct: any){
-    return this.http.get<Product>(`${this.API_URL}/produtos/${idProduct} `);
+  pegarProdutoId(idProduct: any, token:string){
+    return this.http.get<Product>(`${this.API_URL}/produtos/${idProduct} `, { headers: new HttpHeaders({authorization: `Bearer ${token}`})});
   }
 
-  cadastrarProduto(product:Product){
-    return this.http.post<Product[]>(`${this.API_URL}/produtos`, product);
+  cadastrarProduto(product:Product, token:string){
+    return this.http.post<Product[]>(`${this.API_URL}/produtos`, product, { headers: new HttpHeaders({authorization: `Bearer ${token}`})});
   }
 
-  alterarProduto(idProduct: any, product:Product){
-    return this.http.put<Product>(`${this.API_URL}/produtos/${idProduct}`, product);
+  alterarProduto(idProduct: any, product:Product, token:string){
+    return this.http.put<Product>(`${this.API_URL}/produtos/${idProduct}`, product, { headers: new HttpHeaders({authorization: `Bearer ${token}`})});
   }
 
-  apagarProduto(idProduct: String){
-    return this.http.delete<Product[]>(`${this.API_URL}/produtos/${idProduct}`);
+  apagarProduto(idProduct: any, token:string){
+    return this.http.delete<Product[]>(`${this.API_URL}/produtos/${idProduct}`, { headers: new HttpHeaders({authorization: `Bearer ${token}`})});
     // return this.http.delete<Product[]>(`${this.API_URL}products/${idProduct}`);
   }
 

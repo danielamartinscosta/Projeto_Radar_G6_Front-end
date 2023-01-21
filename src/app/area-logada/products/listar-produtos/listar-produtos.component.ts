@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { take, finalize, delay } from 'rxjs';
 import { Product } from '../product.interface';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-listar-produtos',
@@ -19,7 +20,8 @@ export class ListarProdutosComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -30,8 +32,9 @@ export class ListarProdutosComponent implements OnInit {
     this.estaCarregando = true;
     this.erroNoCarregamento = false;
 
+    var token = this.authService.getToken();
     this.productsService
-      .pegarProduto()
+      .pegarProduto(token)
       .pipe(
         take(1),
         delay(1000),
@@ -60,18 +63,19 @@ export class ListarProdutosComponent implements OnInit {
     this.router.navigate([`products/${idProduct}`]);
   }
 
-  editarProduto(idProduct: String) {
+  editarProduto(idProduct: number) {
     this.router.navigate([`products/${idProduct}/editar`]);
   }
 
-  apagarProduto(idProduct: String) {
-    this.productsService.apagarProduto(idProduct).subscribe({
+  apagarProduto(idProduct: any) {
+    var token = this.authService.getToken();
+    this.productsService.apagarProduto(idProduct, token).subscribe({
       next: () => this.onSucessoApagarProduto(idProduct),
       error: () => this.onErroApagarProduto(),
     });
   }
 
-  onSucessoApagarProduto(idProduct: String) {
+  onSucessoApagarProduto(idProduct: number) {
     this.products = this.products?.filter(
       (products) => products.id != idProduct
     );

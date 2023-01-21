@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.interface';
 import { take, finalize } from 'rxjs';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-detalhes-produto',
@@ -20,6 +21,7 @@ export class DetalhesProdutoComponent implements OnInit {
     private ActivatedRoute: ActivatedRoute,
     private productsService: ProductsService,
     private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -32,8 +34,9 @@ export class DetalhesProdutoComponent implements OnInit {
 
     const idProduct = this.ActivatedRoute.snapshot.paramMap.get('id');
 
+    var token = this.authService.getToken();
     this.productsService
-    .pegarProdutoId(idProduct)
+    .pegarProdutoId(idProduct, token)
     .pipe(
       take(1),
       finalize(() => (this.estaCarregando = false))
