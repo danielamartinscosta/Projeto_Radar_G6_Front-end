@@ -37,7 +37,7 @@ export class AuthService {
 
   getToken() {
     if (this.token) {
-      return this.token;
+      return this.token.replace(/\"/g,""); //regex para ignorar "" deixando o conteudo vazio
     }
 
     const tokenGuardado = localStorage.getItem('token');
@@ -54,7 +54,6 @@ export class AuthService {
   }
 
   logout() {
-    this.token = '';
     localStorage.clear();
     this.router.navigate(['login']);
   }

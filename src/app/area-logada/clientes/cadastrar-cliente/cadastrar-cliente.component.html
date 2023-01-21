@@ -18,24 +18,37 @@
 
   <div *ngIf="!estaCarregando && !erroNoCarregamento" class="m-3">
     <form [formGroup]="clienteForm" class="container pl-4 pr-4 ml-4 mr-4">
+
       <div class="form-row">
+        <!-- Id-->
+        <div class="form-group">
+          <label for="id"><span></span></label>
+          <input
+            type="hidden"
+            class="form-control"
+            id="id"
+            placeholder="id"
+            formControlName="id"
+            [class.is-invalid]="exibeErro('nome')" readonly
+          />
+        </div>
         <!-- Nome-->
         <div class="form-group col-md-6">
-          <label for="name">Nome Completo<span>*</span></label>
+          <label for="nome">Nome Completo<span>*</span></label>
           <input
             type="text"
             class="form-control"
             id="nome"
             placeholder="Nome Completo"
-            formControlName="name"
-            [class.is-invalid]="exibeErro('name')"
+            formControlName="nome"
+            [class.is-invalid]="exibeErro('nome')"
           />
         </div>
         <!-- CPF-->
         <div class="form-group col-md-6">
           <label for="cpf">CPF<span>*</span></label>
           <input
-            type="number"
+            type="string"
             class="form-control"
             id="cpf"
             placeholder="XXX.XXX.XXX-XX"
@@ -61,7 +74,7 @@
         <div class="form-group col-md-6">
           <label for="telefone">Telefone<span>*</span></label>
           <input
-            type="number"
+            type="string"
             class="form-control"
             id="telefone"
             placeholder="(XX) XXXXX-XXXX"
@@ -75,7 +88,7 @@
           <input
             class="form-control"
             id="cep"
-            type="number"
+            type="string"
             placeholder="XXXXX-XXX"
             formControlName="cep"
             [class.is-invalid]="exibeErro('cep')"
@@ -89,7 +102,7 @@
           <input
             class="form-control"
             id="logradouro"
-            type="text"
+            type="string"
             placeholder="Endereço"
             formControlName="logradouro"
             [class.is-invalid]="exibeErro('logradouro')"
@@ -101,7 +114,7 @@
           <input
             class="form-control"
             id="numero"
-            type="number"
+            type="string"
             placeholder="Numero"
             formControlName="numero"
             [class.is-invalid]="exibeErro('numero')"
@@ -115,7 +128,7 @@
           <input
             class="form-control"
             id="bairro"
-            type="text"
+            type="string"
             placeholder="Bairro"
             formControlName="bairro"
             [class.is-invalid]="exibeErro('bairro')"
@@ -127,7 +140,7 @@
           <input
             class="form-control"
             id="complemento"
-            type="text"
+            type="string"
             placeholder="Complemento "
             formControlName="complemento"
           />
@@ -140,7 +153,7 @@
           <input
             class="form-control"
             id="cidade"
-            type="text"
+            type="string"
             placeholder="Cidade"
             formControlName="cidade"
             [class.is-invalid]="exibeErro('cidade')"
@@ -149,17 +162,18 @@
         <div class="form-group col-md-4">
           <!-- Estado -->
           <label for="inputEstado">Estado<span>*</span></label>
-          <select
+         <input
             class="form-control"
             id="estado"
-            type="text"
+            type="string"
             placeholder="Estado"
             formControlName="estado"
             [class.is-invalid]="exibeErro('estado')"
-          >
+            />
+            <!-- <select>
             <option selected>Escolher...</option>
             <option>Acre</option>
-            <option>Alagoas/option></option>
+            <option>Alagoas</option>
             <option>Amapá</option>
             <option>Amazonas</option>
             <option>Bahia</option>
@@ -184,7 +198,7 @@
             <option>São Paulo</option>
             <option>Sergipe</option>
             <option>Tocantins</option>
-          </select>
+          </select> -->
         </div>
       </div>
       <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">

@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ClientesService } from './../clientes.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-cadastrar-cliente',
@@ -21,7 +22,8 @@ export class CadastrarClienteComponent implements OnInit {
     private formBuilder: FormBuilder,
     private clientesService: ClientesService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -35,7 +37,8 @@ export class CadastrarClienteComponent implements OnInit {
 
   inicializaForm() {
     this.clienteForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      id: [''],
+      nome: ['', Validators.required],
       telefone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       cpf: ['', Validators.required],
@@ -68,8 +71,9 @@ export class CadastrarClienteComponent implements OnInit {
 
     const idCliente = this.activatedRoute.snapshot.paramMap.get('id');
 
+    var token = this.authService.getToken();
     this.clientesService
-      .getClientePorId(idCliente)
+      .getClientePorId(idCliente, token)
       .pipe(
         take(1),
         finalize(() => (this.estaCarregando = false))
@@ -110,15 +114,18 @@ export class CadastrarClienteComponent implements OnInit {
     this.cadastrarCliente();
   }
 
+
   salvarCliente() {
+    var token = this.authService.getToken();
     this.clientesService
-      .attCliente(this.idCliente, this.clienteForm.value)
+      .attCliente(this.idCliente, this.clienteForm.value, token)
       .subscribe({
         next: () => this.onSucessoSalvarCliente(),
         error: () => this.onErroSalvarCliente(),
       });
   }
 
+  
   onSucessoSalvarCliente() {
     alert('Cliente atualizado com sucesso!');
     this.router.navigate(['clientes']);
@@ -129,7 +136,8 @@ export class CadastrarClienteComponent implements OnInit {
   }
 
   cadastrarCliente() {
-    this.clientesService.criarCliente(this.clienteForm.value).subscribe({
+    var token = this.authService.getToken();
+    this.clientesService.criarCliente(this.clienteForm.value, token).subscribe({
       next: () => this.onSucessoCriarCliente(),
       error: () => this.onErroCriarContato(),
     });

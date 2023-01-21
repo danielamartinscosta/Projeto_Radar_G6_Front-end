@@ -12,23 +12,23 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
   
   pegarProduto(){
-    return this.http.get<Product[]>(`${this.API_URL}/products`);
+    return this.http.get<Product[]>(`${this.API_URL}/produtos`);
   }
 
   pegarProdutoId(idProduct: any){
-    return this.http.get<Product>(`${this.API_URL}/products/${idProduct} `);
+    return this.http.get<Product>(`${this.API_URL}/produtos/${idProduct} `);
   }
 
   cadastrarProduto(product:Product){
-    return this.http.post<Product[]>(`${this.API_URL}/products`, product);
+    return this.http.post<Product[]>(`${this.API_URL}/produtos`, product);
   }
 
   alterarProduto(idProduct: any, product:Product){
-    return this.http.put<Product>(`${this.API_URL}/products/${idProduct}`, product);
+    return this.http.put<Product>(`${this.API_URL}/produtos/${idProduct}`, product);
   }
 
   apagarProduto(idProduct: String){
-    return this.http.delete<Product[]>(`${this.API_URL}/products/${idProduct}`);
+    return this.http.delete<Product[]>(`${this.API_URL}/produtos/${idProduct}`);
     // return this.http.delete<Product[]>(`${this.API_URL}products/${idProduct}`);
   }
 

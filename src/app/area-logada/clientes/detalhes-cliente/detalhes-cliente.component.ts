@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { take, finalize } from 'rxjs';
 import { Cliente } from '../clientes.interface';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-detalhes-cliente',
@@ -20,7 +21,8 @@ export class DetalhesClienteComponent implements OnInit {
   constructor(
     private activatedroute: ActivatedRoute,
     private clientesService: ClientesService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -33,8 +35,9 @@ export class DetalhesClienteComponent implements OnInit {
 
     const idCliente = this.activatedroute.snapshot.paramMap.get('id');
 
+    var token = this.authService.getToken();
     this.clientesService
-      .getClientePorId(idCliente)
+      .getClientePorId(idCliente, token)
       .pipe(
         take(1),
         finalize(() => (this.estaCarregando = false))

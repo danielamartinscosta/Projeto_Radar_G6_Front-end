@@ -37,13 +37,13 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.login();
+    this.login(this.email, this.senha);
   }
 
-  login() {
+  login(email:string, senha:string) {
     this.estaLogando = true;
     this.loginService
-      .logar(this.email, this.senha)
+      .logar({email:email, senha:senha })
       .pipe(finalize(() => (this.estaLogando = false)))
       .subscribe({
         next: () => this.loginEfetivado(),
@@ -72,5 +72,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

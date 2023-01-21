@@ -58,12 +58,12 @@
         </thead>
         <tbody>
           <tr *ngFor="let cliente of clientes">
-            <td class="text-start align-middle pl-5" scope="row d-column"><b>{{ cliente.name }}</b></td>
-            <td class="align-middle pl-5 pr-5">{{ cliente.telefone | phone}}</td>
+            <td class="text-start align-middle pl-5" scope="row d-column"><b>{{ cliente.nome }}</b></td>
+            <td class="align-middle pl-5 pr-5">{{ cliente.telefone }}</td>
             <td class="text-start align-middle pl-5 pr-5">
               {{ cliente.email }}
             </td>
-            <td class="align-middle">{{ cliente.cpf | cpf}}</td>
+            <td class="align-middle">{{ cliente.cpf }}</td>
             <td class="d-flex align-middle justify-content-end">
               <button
                 class="btn btn-info ml-2 mr-2"

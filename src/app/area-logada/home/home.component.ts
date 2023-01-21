@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { Cliente } from '../clientes/clientes.interface';
 import { ClientesService } from '../clientes/clientes.service';
 import { Product } from '../products/product.interface';
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private clienteService: ClientesService,
-    private productService: ProductsService
+    private productService: ProductsService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -76,8 +78,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  
+
+
   countClients() {
-    this.clienteService.getClientes().subscribe({
+    var token = this.authService.getToken();
+    this.clienteService.getClientes(token).subscribe({
       next: (resp) => this.onSuccessClients(resp),
     });
   }

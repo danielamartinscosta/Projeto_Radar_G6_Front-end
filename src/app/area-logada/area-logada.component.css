@@ -32,4 +32,11 @@ li a:hover {
   font-weight: 600;
 }
 
+.sair {
+  background-color:rgb(46, 139, 252);
+  position:sticky;
+  bottom: 0;
+  top: 650px;
+}
+
 

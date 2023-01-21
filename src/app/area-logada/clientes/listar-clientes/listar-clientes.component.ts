@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { finalize, take, delay } from 'rxjs';
 import { Cliente } from '../clientes.interface';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-listar-clientes',
@@ -18,7 +19,8 @@ export class ListarClientesComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private clientesService: ClientesService
+    private clientesService: ClientesService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -29,8 +31,10 @@ export class ListarClientesComponent implements OnInit {
     this.estaCarregando = true;
     this.erroNoCarregamento = false;
 
+    
+    var token = this.authService.getToken();
     this.clientesService
-      .getClientes()
+      .getClientes(token)
       .pipe(
         take(1),
         delay(1000),
@@ -63,7 +67,8 @@ export class ListarClientesComponent implements OnInit {
   }
 
   apagarCliente(idCliente: any) {
-    this.clientesService.apagarCliente(idCliente).subscribe({
+    var token = this.authService.getToken();
+    this.clientesService.apagarCliente(idCliente, token).subscribe({
       next: () => this.onSucessoApagarCliente(idCliente),
       error: () => this.onErroApagarCliente(),
     });

@@ -37,14 +37,28 @@ const routes: Routes = [
           import('./fluxo-de-caixa/fluxo-de-caixa.module').then(
             (m) => m.FluxoDeCaixaModule
           ),
-      },
+      },/*
       {
-        path: 'orders',
+        path: 'pedidos',
         loadChildren: () =>
-          import('./orders/orders.module').then(
-            (m) => m.OrdersModule
+          import('./pedidos/pedidos.module').then(
+            (m) => m.PedidosModule
           )
       },
+      {
+        path: 'campanhas',
+        loadChildren: () =>
+          import('./campanhas/campanhas.module').then(
+            (m) => m.CampanhasModule
+          )
+      },
+      {
+        path: 'lojas',
+        loadChildren: () =>
+          import('./lojas/lojas.module').then(
+            (m) => m.LojasModule
+          )
+      },*/
     ],
   },
 ];

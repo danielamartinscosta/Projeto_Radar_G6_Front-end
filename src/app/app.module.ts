@@ -14,7 +14,11 @@ import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 import { ListarClientesComponent } from './area-logada/clientes/listar-clientes/listar-clientes.component';
 import { DetalhesClienteComponent } from './area-logada/clientes/detalhes-cliente/detalhes-cliente.component';
-import { OrdersComponent } from './area-logada/orders/orders.component';
+/*import { ListarPedidosComponent } from './area-logada/pedidos/listar-pedidos/listar-pedidos.component';
+import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-pedido.component';
+import { ListarLojasComponent } from './area-logada/lojas/listar-lojas/listar-lojas.component';
+import { DetalhesLojaComponent } from './area-logada/lojas/detalhes-loja/detalhes-loja.component';*/
+
 
 
 registerLocaleData(ptBr);
@@ -27,8 +31,13 @@ registerLocaleData(ptBr);
     DetalhesClienteComponent,
     DetalhesProdutoComponent,
     ListarProdutosComponent,
-    OrdersComponent
+    /*ListarPedidosComponent,
+    DetalhesPedidoComponent,
+    ListarLojasComponent,
+    DetalhesLojaComponent*/
   ],
+
+  
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, SharedModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
