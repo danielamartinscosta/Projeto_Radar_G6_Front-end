@@ -1,0 +1,86 @@
+<div class="m-3">
+  <h1 class="mb-3">Lojas</h1>
+
+  <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>ERRO :(</h2>
+    <button
+      (click)="carregarLojas()"
+      type="button"
+      class="btn btn-secondary btn-lg"
+    >
+      Tentar novamente
+    </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento">
+    <div class="d-flex justify-content-between">
+      <button
+        (click)="paginaAnterior()"
+        [disabled]="pagina === 1"
+        class="btn btn-outline-secondary mb-1"
+      >
+        Anterior
+      </button>
+      <span>Página Atual: {{ pagina }}</span>
+      <button (click)="proximaPagina()" class="btn btn-outline-secondary mb-1">
+        Próxima >>
+      </button>
+    </div>
+
+    <div class="align-middle">
+      <table class="table text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">NOME</th>
+            <th scope="col">OBSERVAÇÃO</th>
+            <th scope="col">ENDEREÇO</th>
+            <th class="justify-content-end pr-3">
+              <div class="d-flex justify-content-end">
+                <button
+                  class="btn btn-success"
+                  routerLink="/formulario-loja"
+                  (click)="novaLoja()"
+                >
+                  Novo
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let loja of lojas">
+            <td class="text-start align-middle pl-5" scope="row d-column">
+              <b>{{ loja.nome }}</b>
+            </td>
+            <td class="align-middle pl-5 pr-5">{{ loja.observacao }}</td>
+            <td class="text-start align-middle pl-5 pr-5">
+              {{ loja.logradouro}}
+              <button
+                class="btn btn-info ml-2 mr-2"
+                (click)="verDetalhes(loja.id)"
+              >
+                Detalhes
+              </button>
+              <button
+                class="btn btn-warning ml-2 mr-2"
+                (click)="editarLoja(loja.id)"
+              >
+                Editar
+              </button>
+              <button
+                class="btn btn-danger ml-2 mr-2"
+                (click)="apagarLoja(loja.id)"
+              >
+                Excluir
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

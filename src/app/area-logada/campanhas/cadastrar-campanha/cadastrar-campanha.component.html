@@ -1,0 +1,61 @@
+<div class="m-3">
+  <h1 class="mb-3 p-3">{{ alterandoCampanha() ? "Campanha" : "Nova Campanha" }}</h1>
+
+  <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>ERRO :(</h2>
+    <button (click)="carregarCampanhas()" type="button" class="btn btn-secondary btn-lg">
+      Tentar novamente
+    </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento" class="m-3">
+    <form [formGroup]="campanhaForm" class="container pl-4 pr-4 ml-4 mr-4">
+      <div class="form-row">
+        <!-- Id-->
+        <div class="form-group ">
+          <label for="id"><span></span></label>
+          <input type="Hidden" class="form-control" id="id" placeholder="" formControlName="id"
+            [class.is-invalid]="exibeErro('id')" />
+        </div>
+        <!-- Nome-->
+        <div class="form-group col-md-8">
+          <label for="nome">Nome da Campanha<span>*</span></label>
+          <input type="string" class="form-control" id="nome" placeholder="Nome da Campanha" formControlName="nome"
+            [class.is-invalid]="exibeErro('nome')" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="data">Data<span>*</span></label>
+          <input type="date" class="form-control" id="data" placeholder="" formControlName="data"
+            [class.is-invalid]="exibeErro('data')" />
+        </div>
+      </div>
+      <div class="form-row">
+        <!-- Descricao-->
+        <div class="form-group col-md-8">
+          <label for="descricao">Descrição<span>*</span></label>
+          <textarea type="string" class="form-control" id="descricao" placeholder="Descrição da Campanha"
+            formControlName="descricao" [class.is-invalid]="exibeErro('descricao')" rows="3"></textarea>
+        </div>
+      </div>
+      <!-- Data -->
+      <div class="form-row">
+        <!-- Foto -->
+        <div class="form-group col-md-6">
+          <label for="foto">Foto<span>*</span></label>
+          <input type="file" class="form-control" id="foto" placeholder="foto"
+            formControlName="foto" [class.is-invalid]="exibeErro('foto')" />
+        </div>
+      </div>
+      <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
+        {{ alterandoCampanha() ? "Atualizar Campanha" : "Cadastrar Campanha" }}
+      </button>
+      <button class="btn btn-secondary mt-2 ml-3" (click)="voltar()">
+        Voltar
+      </button>
+    </form>
+  </div>
+</div>

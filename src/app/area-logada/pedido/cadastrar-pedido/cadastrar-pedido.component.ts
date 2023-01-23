@@ -13,7 +13,8 @@ export class CadastrarPedidoComponent implements OnInit {
   erroNoCarregamento: boolean;
   pagina = 1;
   clientesService: any;
-
+  pedido: any;
+  
   constructor(private router:Router) {}
 
   ngOnInit(): void {
@@ -54,5 +55,20 @@ export class CadastrarPedidoComponent implements OnInit {
     this.pagina = this.pagina - 1;
     // implementar lógica de paginação
   }
+
+  novoPedido(){
+    this.router.navigate(['listarPedidos']);
+  }
+
+  verDetalhes(){
+    return
+  }
+
+  editarPedido(){
+    return
+}                   
+  apagarCliente(){
+    return
+}
 
 }

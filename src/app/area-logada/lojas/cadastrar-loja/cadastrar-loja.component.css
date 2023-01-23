@@ -1,0 +1,42 @@
+span {
+  color: #ff4600;
+}
+
+form {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+button {
+  font-size: 1rem;
+  padding: 12px 15px;
+  font-weight: 600;
+  color: #133700;
+  transition: 0.3s;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.btn-cadastrar {
+  background: linear-gradient(#19EA19, #0AD10A);
+}
+
+input,
+select {
+  border-radius: 5px;
+}
+
+button:hover {
+  font-weight: 700;
+}
+
+input:focus,
+select:focus{
+  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border: solid 1.5px #000;
+}

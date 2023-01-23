@@ -15,9 +15,11 @@ import ptBr from '@angular/common/locales/pt';
 import { ListarClientesComponent } from './area-logada/clientes/listar-clientes/listar-clientes.component';
 import { DetalhesClienteComponent } from './area-logada/clientes/detalhes-cliente/detalhes-cliente.component';
 /*import { ListarPedidosComponent } from './area-logada/pedidos/listar-pedidos/listar-pedidos.component';
-import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-pedido.component';
+import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-pedido.component';*/
 import { ListarLojasComponent } from './area-logada/lojas/listar-lojas/listar-lojas.component';
-import { DetalhesLojaComponent } from './area-logada/lojas/detalhes-loja/detalhes-loja.component';*/
+import { DetalhesLojaComponent } from './area-logada/lojas/detalhes-loja/detalhes-loja.component';
+import { ListarCampanhasComponent } from './area-logada/campanhas/listar-campanhas/listar-campanhas.component';
+import { DetalhesCampanhaComponent } from './area-logada/campanhas/detalhes-campanha/detalhes-campanha.component';
 
 
 
@@ -32,9 +34,11 @@ registerLocaleData(ptBr);
     DetalhesProdutoComponent,
     ListarProdutosComponent,
     /*ListarPedidosComponent,
-    DetalhesPedidoComponent,
+    DetalhesPedidoComponent,*/
     ListarLojasComponent,
-    DetalhesLojaComponent*/
+    DetalhesLojaComponent,
+    ListarCampanhasComponent,
+    DetalhesCampanhaComponent
   ],
 
   

@@ -1,0 +1,19 @@
+<div class="container text-center p-5">
+  <div class="d-flex justify-content-center">
+    <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div *ngIf="erroNoCarregamento">
+      <h2>Ocorreu um erro! :(</h2>
+      <button (click)="carregarLoja()" type="button" class="btn btn-secondary btn-lg">
+        Tentar novamente
+      </button>
+    </div>
+    <div *ngIf="!estaCarregando && !erroNoCarregamento">
+      <p><b>Nome:</b> {{ loja.nome }}</p>
+      <p><b>Observação:</b> {{ loja.observacao }}</p>
+      <p><b>Endereço:</b> {{ loja.logradouro}}, {{loja.numero}}, {{loja.bairro}}</p>
+      <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastrarPedidoComponent } from './cadastrar-pedidos/cadastrar-pedido.component';
+import { CadastrarPedidoComponent } from './cadastrar-pedido/cadastrar-pedido.component';
 
 const routes: Routes = [
   {
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class pedidoRoutingModule { }
+export class PedidoRoutingModule { }

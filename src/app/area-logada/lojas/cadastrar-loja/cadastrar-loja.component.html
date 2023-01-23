@@ -1,5 +1,5 @@
 <div class="m-3">
-  <h1 class="mb-3 p-3">{{ estaAlterando() ? "Cliente" : "Novo Cliente" }}</h1>
+  <h1 class="mb-3 p-3">{{ alterandoLoja() ? "Loja" : "Nova Loja" }}</h1>
 
   <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
     <span class="visually-hidden">Loading...</span>
@@ -7,55 +7,41 @@
 
   <div *ngIf="erroNoCarregamento">
     <h2>ERRO :(</h2>
-    <button (click)="carregarClientes()" type="button" class="btn btn-secondary btn-lg">
+    <button (click)="carregarLojas()" type="button" class="btn btn-secondary btn-lg">
       Tentar novamente
     </button>
   </div>
 
   <div *ngIf="!estaCarregando && !erroNoCarregamento" class="m-3">
-    <form [formGroup]="clienteForm" class="container pl-4 pr-4 ml-4 mr-4">
-
+    <form [formGroup]="lojaForm" class="container pl-4 pr-4 ml-4 mr-4">
       <div class="form-row">
         <!-- Id-->
-        <div class="form-group">
-          <label for="id"><span></span></label>
-          <input type="hidden" class="form-control" id="id" placeholder="id" formControlName="id"
-            [class.is-invalid]="exibeErro('nome')" readonly />
+        <div class="form-group ">
+          <label for="nome"><span></span></label>
+          <input type="hidden" class="form-control" id="id" placeholder="" formControlName="id"
+            [class.is-invalid]="exibeErro('id')" />
         </div>
         <!-- Nome-->
         <div class="form-group col-md-6">
-          <label for="nome">Nome Completo<span>*</span></label>
-          <input type="text" class="form-control" id="nome" placeholder="Nome Completo" formControlName="nome"
+          <label for="nome">Nome da Loja<span>*</span></label>
+          <input type="string" class="form-control" id="nome" placeholder="Nome da Loja" formControlName="nome"
             [class.is-invalid]="exibeErro('nome')" />
         </div>
-        <!-- CPF-->
+        <!-- Observação-->
         <div class="form-group col-md-6">
-          <label for="cpf">CPF<span>*</span></label>
-          <input type="string" class="form-control" id="cpf" placeholder="XXX.XXX.XXX-XX" formControlName="cpf"
-            [class.is-invalid]="exibeErro('cpf')" />
+          <label for="observacao">Observação<span>*</span></label>
+          <input type="string" class="form-control" id="observacao" placeholder="Observação"
+            formControlName="observacao" [class.is-invalid]="exibeErro('observacao')" />
         </div>
       </div>
-      <!-- Email -->
-      <div class="form-group">
-        <label for="inputEmail4">Email<span>*</span></label>
-        <input type="email" class="form-control" id="email" placeholder="E-mail" formControlName="email"
-          [class.is-invalid]="exibeErro('email')" />
-      </div>
-      <!-- Telefone -->
+      <!-- CEP -->
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="telefone">Telefone<span>*</span></label>
-          <input type="string" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX"
-            formControlName="telefone" [class.is-invalid]="exibeErro('telefone')" />
-        </div>
-        <!-- CEP -->
-        <div class="form-group col-md-6">
-          <label for="cep">CEP<span>*</span></label>
-          <input class="form-control" id="cep" type="string" placeholder="XXXXX-XXX" formControlName="cep"
-            [class.is-invalid]="exibeErro('cep')" />
-        </div>
+      <div class="form-group col-md-2">
+        <label for="cep">CEP<span>*</span></label>
+        <input class="form-control" id="cep" type="string" placeholder="XXXXX-XXX" formControlName="cep"
+          [class.is-invalid]="exibeErro('cep')" />
       </div>
-      <div class="form-row">
+      
         <!-- Endereço -->
         <div class="form-group col-md-8">
           <label for="inputAddress">Endereço<span>*</span></label>
@@ -63,7 +49,7 @@
             [class.is-invalid]="exibeErro('logradouro')" />
         </div>
         <!-- Número -->
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
           <label for="inputAddress">Número<span>*</span></label>
           <input class="form-control" id="numero" type="string" placeholder="Numero" formControlName="numero"
             [class.is-invalid]="exibeErro('numero')" />
@@ -122,11 +108,11 @@
             <option>São Paulo</option>
             <option>Sergipe</option>
             <option>Tocantins</option>
-          </select> 
+          </select>
         </div>
       </div>
       <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
-        {{ estaAlterando() ? "Atualizar Cliente" : "Cadastrar Cliente" }}
+        {{ alterandoLoja() ? "Atualizar Loja" : "Cadastrar Loja" }}
       </button>
       <button class="btn btn-secondary mt-2 ml-3" (click)="voltar()">
         Voltar

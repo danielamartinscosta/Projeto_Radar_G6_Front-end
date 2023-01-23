@@ -44,7 +44,7 @@ const routes: Routes = [
           import('./pedidos/pedidos.module').then(
             (m) => m.PedidosModule
           )
-      },
+      },*/
       {
         path: 'campanhas',
         loadChildren: () =>
@@ -58,7 +58,7 @@ const routes: Routes = [
           import('./lojas/lojas.module').then(
             (m) => m.LojasModule
           )
-      },*/
+      },
     ],
   },
 ];
