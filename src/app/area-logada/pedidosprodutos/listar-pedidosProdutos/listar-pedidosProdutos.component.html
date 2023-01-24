@@ -27,9 +27,10 @@
       <table class="table text-center">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">VALOR TOTAL</th>
-            <th scope="col">DATA</th>
+            <th scope="col">ID-PEDIDO</th>
+            <th scope="col">ID-PRODUTO</th>
+            <th scope="col">QUANTIDADE</th>
+            <th scope="col">VALOR</th>
               <th class="justify-content-end pr-3">
               <div class="d-flex justify-content-end">
                 <button class="btn btn-success" routerLink="/formulario-pedido" (click)="novoPedidoProduto()">
@@ -44,11 +45,11 @@
               <td class="text-start align-middle pl-5" scope="row d-column">
                 <b>{{pedidoProduto.pedidoId}} </b></td>
             <td class="align-middle pl-5 pr-5">{{ pedidoProduto.produtoId}}</td>
-            <td class="text-start align-middle pl-5 pr-5">
-              {{ pedidoProduto.valor | currency }}</td>
               <td class="text-start align-middle pl-5 pr-5">
                 {{ pedidoProduto.quantidade }}</td>
-              <td class="d-flex align-middle justify-content-end">
+                <td class="text-start align-middle pl-5 pr-5">
+                  {{ pedidoProduto.valor | currency }}</td>
+                <td class="d-flex align-middle justify-content-end">
               <a class="btn btn-info ml-2 mr-2" (click)="verDetalhes(pedidoProduto.id)"><svg xmlns="http://www.w3.org/2000/svg"
                   width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                   <path

@@ -30,6 +30,7 @@ export class ListarPedidosComponent implements OnInit {
 
   ngOnInit() {
     this.carregarPedidos();
+    this.carregarClientes();
   }
 
   carregarPedidos() {

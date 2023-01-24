@@ -2,7 +2,7 @@ import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Campanha } from './campanhas.interface';
-import { Product } from '../products/product.interface';
+import { Produto } from '../products/product.interface';
 
 @Injectable({
   providedIn: 'root'

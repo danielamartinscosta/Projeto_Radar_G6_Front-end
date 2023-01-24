@@ -24,38 +24,38 @@
         <!-- Nome Pedido-->
         <div class="form-group col-md-6">
           <label for="pedidoId">ID Pedido<span>*</span></label>
-            <select type="number" class="form-control" id="pedidoId" placeholder="" formControlName="pedidoId"
+          <select type="number" class="form-control" id="pedidoId" placeholder="" formControlName="pedidoId"
             [class.is-invalid]="exibeErro('pedidoId')">
-            
+
             <option *ngFor="let pedido of pedidos" [ngValue]="pedido.id">
               {{ pedido.id }}</option>
-          </select> 
+          </select>
         </div>
         <!-- Produto-->
         <div class="form-group col-md-6">
-          <label for="produtoId">ID Produto<span>*</span></label>
-            <select [(ngModel)]="products" multiple type="number" class="form-control" id="produtoId" placeholder="" formControlName="produtoId"
+          <label for="produtoId">Produto<span>*</span></label>
+          <select type="number" class="form-control" id="produtoId" placeholder="" formControlName="produtoId"
             [class.is-invalid]="exibeErro('produtoId')">
-            //<option selected></option>
-            <option *ngFor="let product of products" >
-              {{ product.id }}</option>
-          </select> 
+            <option selected>Escolher...</option>
+            <option *ngFor="let produto of produtos" [ngValue]="produto.id">
+              {{ produto.nome }}</option>
+          </select>
         </div>
 
-        <div class="form-group col-md-6">
-          <label for="valor">Valor<span>*</span></label>
-          <input type="number" class="form-control" id="valor" placeholder="R$ 0.00" formControlName="valor"
-            [class.is-invalid]="exibeErro('valor')" />
-        </div>
-      </div>
       <!-- Quantidade -->
       <div class="form-group col-md-6">
         <label for="quantidade">Quantidade<span>*</span></label>
         <input type="quantidade" class="form-control" id="quantidade" placeholder="" formControlName="quantidade"
           [class.is-invalid]="exibeErro('quantidade')" />
-      </div>      
+      </div>
+      <div class="form-group col-md-6">
+        <label for="valor">Valor<span>*</span></label>
+        <input type="number" class="form-control" id="valor" placeholder="R$ 0.00" formControlName="valor"
+          [class.is-invalid]="exibeErro('valor')" />
+      </div>
+      </div>
       <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
-        {{ alterandoPedidoProduto() ? "Atualizar PedidoProduto" : "Cadastrar PedidoProduto" }}
+        {{ alterandoPedidoProduto() ? "Atualizar Pedido" : "Cadastrar Pedido" }}
       </button>
       <button class="btn btn-secondary mt-2 ml-3" (click)="voltar()">
         Voltar

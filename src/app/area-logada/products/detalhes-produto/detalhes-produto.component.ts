@@ -1,7 +1,7 @@
 import { ProductsService } from '../products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product.interface';
+import { Produto } from '../product.interface';
 import { take, finalize } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
 })
 export class DetalhesProdutoComponent implements OnInit {
 
-  product: Product;
+  produto: Produto;
 
   estaCarregando: boolean;
   erroNoCarregamento: boolean;
@@ -42,14 +42,14 @@ export class DetalhesProdutoComponent implements OnInit {
       finalize(() => (this.estaCarregando = false))
     )
     .subscribe({
-      next:(resposta: Product) => this.onSucesso(resposta),
+      next:(resposta: Produto) => this.onSucesso(resposta),
       error:(erro) => this.onErro(erro),
     });
   }   
 
-  onSucesso(resposta: Product){
+  onSucesso(resposta: Produto){
     {
-      this.product = resposta;
+      this.produto = resposta;
     }
   }
 

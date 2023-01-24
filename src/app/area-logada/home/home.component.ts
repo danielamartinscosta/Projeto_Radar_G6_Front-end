@@ -9,7 +9,7 @@ import { Loja } from '../lojas/lojas.interface';
 import { LojasService } from '../lojas/lojas.service';
 import { Pedido } from '../pedidos/pedidos.interface';
 import { PedidosService } from '../pedidos/pedidos.service';
-import { Product } from '../products/product.interface';
+import { Produto } from '../products/product.interface';
 import { ProductsService } from '../products/products.service';
 Chart.register(...registerables);
 
@@ -114,7 +114,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onSuccessProducts(resp: Product[]) {
+  onSuccessProducts(resp: Produto[]) {
     this.qntProducts = resp.length;
   }
 

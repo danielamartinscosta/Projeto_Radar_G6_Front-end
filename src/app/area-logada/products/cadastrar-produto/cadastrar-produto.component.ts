@@ -1,7 +1,7 @@
 import { ProductsService } from '../products.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Product } from '../product.interface';
+import { Produto } from '../product.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take, finalize } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
@@ -72,12 +72,12 @@ export class CadastrarProdutoComponent implements OnInit{
           finalize(() => (this.estaCarregando = false))
         )
         .subscribe({
-          next:(resposta: Product) => this.onSucessoCarregarProdutoscarregarProdutos(resposta),
+          next:(resposta: Produto) => this.onSucessoCarregarProdutoscarregarProdutos(resposta),
           error:(erro) => this.onErroCarregarProdutoscarregarProdutos(erro),
         });
       }   
 
-    onSucessoCarregarProdutoscarregarProdutos(resposta: Product){
+    onSucessoCarregarProdutoscarregarProdutos(resposta: Produto){
       this.productForm.patchValue(resposta);
     }
 

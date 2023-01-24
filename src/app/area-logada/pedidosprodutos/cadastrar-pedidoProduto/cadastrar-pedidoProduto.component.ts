@@ -1,13 +1,12 @@
 import { PedidosProdutosService } from '../pedidosProdutos.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { ActivatedRoute, Router } from '@angular/router';
 import { take, finalize, delay } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { PedidoProduto } from '../pedidosProdutos.interface';
 import { Pedido } from '../../pedidos/pedidos.interface';
-import { Product } from '../../products/product.interface';
+import { Produto } from '../../products/product.interface';
 import { ProductsService } from '../../products/products.service';
 import { PedidosService } from '../../pedidos/pedidos.service';
 import { ClientesService } from '../../clientes/clientes.service';
@@ -22,7 +21,7 @@ export class CadastrarPedidoProdutoComponent implements OnInit{
   idPedidoProduto: String | null;
   pedidoProdutoForm: FormGroup;
   pedidos: Array<Pedido>;
-  products: Array<Product>;
+  produtos: Array<Produto>;
   clientes: Array<Cliente>;
  
   //Acrescenatr pedidos e produtos
@@ -181,8 +180,8 @@ export class CadastrarPedidoProdutoComponent implements OnInit{
         });
     }
   
-    onSucessoCarregarProduto(resposta: Product[]) {
-      this.products = resposta;
+    onSucessoCarregarProduto(resposta: Produto[]) {
+      this.produtos = resposta;
     }
   
     onErroCarregarProduto(erro: any) {

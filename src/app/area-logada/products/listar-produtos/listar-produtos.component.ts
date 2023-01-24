@@ -2,7 +2,7 @@ import { ProductsService } from '../products.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { take, finalize, delay } from 'rxjs';
-import { Product } from '../product.interface';
+import { Produto } from '../product.interface';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
   styleUrls: ['./listar-produtos.component.css'],
 })
 export class ListarProdutosComponent implements OnInit {
-  products: Array<Product>;
+  produtos: Array<Produto>;
 
   pagina = 1;
 
@@ -46,8 +46,8 @@ export class ListarProdutosComponent implements OnInit {
       });
   }
 
-  onSucesso(resposta: Product[]) {
-    this.products = resposta;
+  onSucesso(resposta: Produto[]) {
+    this.produtos = resposta;
   }
 
   onErro(erro: any) {
@@ -76,8 +76,8 @@ export class ListarProdutosComponent implements OnInit {
   }
 
   onSucessoApagarProduto(idProduct: number) {
-    this.products = this.products?.filter(
-      (products) => products.id != idProduct
+    this.produtos = this.produtos?.filter(
+      (produtos) => produtos.id != idProduct
     );
     alert('Produto deletado com sucesso');
   }

@@ -5,7 +5,7 @@ import { take, finalize, delay } from 'rxjs';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { PedidoProduto } from '../pedidosProdutos.interface';
 import { Pedido } from '../../pedidos/pedidos.interface';
-import { Product } from '../../products/product.interface';
+import { Produto } from '../../products/product.interface';
 import { PedidosService } from '../../pedidos/pedidos.service';
 import { ProductsService } from '../../products/products.service';
 import { Cliente } from '../../clientes/clientes.interface';
@@ -19,7 +19,7 @@ import { ClientesService } from '../../clientes/clientes.service';
 export class ListarPedidosProdutosComponent implements OnInit {
   pedidosProdutos: Array<PedidoProduto>;
   pedidos: Array<Pedido>;
-  products: Array<Product>;
+  produtos: Array<Produto>;
 
   clientes: Array<Cliente>;
 
@@ -41,6 +41,7 @@ export class ListarPedidosProdutosComponent implements OnInit {
     this.carregarPedidosProdutos();
     this.carregarPedidos();
     this.carregarProdutos();
+    this.carregarClientes();
   }
 
   carregarPedidosProdutos() {
@@ -118,8 +119,8 @@ export class ListarPedidosProdutosComponent implements OnInit {
       });
   }
 
-  onSucessoCarregarProduto(resposta: Product[]) {
-    this.products = resposta;
+  onSucessoCarregarProduto(resposta: Produto[]) {
+    this.produtos = resposta;
   }
 
   onErroCarregarProduto(erro: any) {
