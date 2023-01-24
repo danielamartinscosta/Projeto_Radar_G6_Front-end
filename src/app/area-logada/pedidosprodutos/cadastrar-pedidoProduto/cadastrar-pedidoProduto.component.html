@@ -1,0 +1,65 @@
+<div class="m-3">
+  <h1 class="mb-3 p-3">{{ alterandoPedidoProduto() ? "PedidoProduto" : "Novo PedidoProduto" }}</h1>
+
+  <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>ERRO :(</h2>
+    <button (click)="carregarPedidosProdutos()" type="button" class="btn btn-secondary btn-lg">
+      Tentar novamente
+    </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento" class="m-3">
+    <form [formGroup]="pedidoProdutoForm" class="container pl-4 pr-4 ml-4 mr-4">
+      <div class="form-row">
+        <!-- Id-->
+        <div class="form-group ">
+          <label for="id"><span></span></label>
+          <input type="Hidden" class="form-control" id="id" placeholder="" formControlName="id"
+            [class.is-invalid]="exibeErro('id')" />
+        </div>
+        <!-- Nome Pedido-->
+        <div class="form-group col-md-6">
+          <label for="pedidoId">ID Pedido<span>*</span></label>
+            <select type="number" class="form-control" id="pedidoId" placeholder="" formControlName="pedidoId"
+            [class.is-invalid]="exibeErro('pedidoId')">
+            
+            <option *ngFor="let pedido of pedidos" [ngValue]="pedido.id">
+              {{ pedido.id }}</option>
+          </select> 
+        </div>
+        <!-- Produto-->
+        <div class="form-group col-md-6">
+          <label for="produtoId">ID Produto<span>*</span></label>
+            <select [(ngModel)]="products" multiple type="number" class="form-control" id="produtoId" placeholder="" formControlName="produtoId"
+            [class.is-invalid]="exibeErro('produtoId')">
+            //<option selected></option>
+            <option *ngFor="let product of products" >
+              {{ product.id }}</option>
+          </select> 
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="valor">Valor<span>*</span></label>
+          <input type="number" class="form-control" id="valor" placeholder="R$ 0.00" formControlName="valor"
+            [class.is-invalid]="exibeErro('valor')" />
+        </div>
+      </div>
+      <!-- Quantidade -->
+      <div class="form-group col-md-6">
+        <label for="quantidade">Quantidade<span>*</span></label>
+        <input type="quantidade" class="form-control" id="quantidade" placeholder="" formControlName="quantidade"
+          [class.is-invalid]="exibeErro('quantidade')" />
+      </div>      
+      <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
+        {{ alterandoPedidoProduto() ? "Atualizar PedidoProduto" : "Cadastrar PedidoProduto" }}
+      </button>
+      <button class="btn btn-secondary mt-2 ml-3" (click)="voltar()">
+        Voltar
+      </button>
+    </form>
+  </div>
+</div>

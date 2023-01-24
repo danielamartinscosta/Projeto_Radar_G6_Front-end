@@ -19,9 +19,11 @@ import { ListarLojasComponent } from './area-logada/lojas/listar-lojas/listar-lo
 import { DetalhesLojaComponent } from './area-logada/lojas/detalhes-loja/detalhes-loja.component';
 import { ListarCampanhasComponent } from './area-logada/campanhas/listar-campanhas/listar-campanhas.component';
 import { DetalhesCampanhaComponent } from './area-logada/campanhas/detalhes-campanha/detalhes-campanha.component';
-import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-produto.component';
+import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-pedido.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { ListarPedidosProdutosComponent } from './area-logada/pedidosprodutos/listar-pedidosProdutos/listar-pedidosProdutos.component';
+import { DetalhesPedidoProdutoComponent } from './area-logada/pedidosprodutos/detalhes-pedidoProduto/detalhes-pedidoProduto.component';
 
 registerLocaleData(ptBr);
 
@@ -38,7 +40,9 @@ registerLocaleData(ptBr);
     ListarLojasComponent,
     DetalhesLojaComponent,
     ListarCampanhasComponent,
-    DetalhesCampanhaComponent
+    DetalhesCampanhaComponent,
+    ListarPedidosProdutosComponent,
+    DetalhesPedidoProdutoComponent
   ],
 
   

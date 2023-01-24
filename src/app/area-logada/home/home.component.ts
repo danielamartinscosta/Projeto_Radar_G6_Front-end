@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit {
 
     this.countClients();
     this.countProducts();
+    this.countPedidos();
     this.countLojas();
     this.countCampanhas();
 
@@ -144,8 +145,8 @@ export class HomeComponent implements OnInit {
 
   countPedidos() {
     var token = this.authService.getToken();
-    this.campanhaService.pegarCampanha(token).subscribe({
-      next: (resp) => this.onSuccessCampanhas(resp),
+    this.pedidosService.pegarPedido(token).subscribe({
+      next: (resp) => this.onSuccessPedidos(resp),
     });
   }
 

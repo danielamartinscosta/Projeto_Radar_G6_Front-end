@@ -6,7 +6,7 @@
     <div *ngIf="erroNoCarregamento">
       <h2>Ocorreu um erro! :(</h2>
       <button
-        (click)="carregarProduto()"
+        (click)="carregarPedidoProduto()"
         type="button"
         class="btn btn-secondary btn-lg"
       >
@@ -14,10 +14,10 @@
       </button>
     </div>
     <div *ngIf="!estaCarregando && !erroNoCarregamento">
-      <p><b>Nome:</b> {{ product.nome }}</p>
-      <p><b>Descrição:</b> {{ product.descricao }}</p>
-      <p><b>Preço:</b> {{ product.valor }}</p>
-      <p><b>Quantidade:</b> {{ product.quantidadeEstoque }}</p>
+      <p><b>ID Pedido:</b> {{ pedidoProduto.pedidoId }}</p>
+      <p><b>ID Produto:</b> {{ pedidoProduto.produtoId }}</p>
+      <p><b>Valor:</b> {{ pedidoProduto.valor | currency }}</p>
+      <p><b>Quantidade:</b> {{ pedidoProduto.quantidade}}</p>
       <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
     </div>
   </div>

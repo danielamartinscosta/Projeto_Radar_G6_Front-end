@@ -3,7 +3,7 @@ import { ListarPedidosComponent } from './listar-pedidos/listar-pedidos.componen
 import { CadastrarPedidoComponent } from './cadastrar-pedido/cadastrar-pedido.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetalhesPedidoComponent } from './detalhes-pedido/detalhes-produto.component';
+import { DetalhesPedidoComponent } from './detalhes-pedido/detalhes-pedido.component';
 
 
 const routes: Routes = [
