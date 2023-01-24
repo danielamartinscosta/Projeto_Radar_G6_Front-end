@@ -17,7 +17,7 @@
       <div class="form-row">
         <!-- Id-->
         <div class="form-group ">
-          <label for="nome"><span></span></label>
+          <label for="id"><span></span></label>
           <input type="hidden" class="form-control" id="id" placeholder="" formControlName="id"
             [class.is-invalid]="exibeErro('id')" />
         </div>
@@ -44,13 +44,13 @@
       
         <!-- Endereço -->
         <div class="form-group col-md-8">
-          <label for="inputAddress">Endereço<span>*</span></label>
+          <label for="logradouro">Endereço<span>*</span></label>
           <input class="form-control" id="logradouro" type="string" placeholder="Endereço" formControlName="logradouro"
             [class.is-invalid]="exibeErro('logradouro')" />
         </div>
         <!-- Número -->
         <div class="form-group col-md-2">
-          <label for="inputAddress">Número<span>*</span></label>
+          <label for="numero">Número<span>*</span></label>
           <input class="form-control" id="numero" type="string" placeholder="Numero" formControlName="numero"
             [class.is-invalid]="exibeErro('numero')" />
         </div>
@@ -58,27 +58,28 @@
       <div class="form-row">
         <!-- Bairro -->
         <div class="form-group col-md-8">
-          <label for="inputAddress2">Bairro<span>*</span></label>
+          <label for="bairro">Bairro<span>*</span></label>
           <input class="form-control" id="bairro" type="string" placeholder="Bairro" formControlName="bairro"
             [class.is-invalid]="exibeErro('bairro')" />
         </div>
         <!-- Complemento -->
         <div class="form-group col-md-4">
-          <label for="inputAddress2">Complemento</label>
+          <label for="complemento">Complemento</label>
           <input class="form-control" id="complemento" type="string" placeholder="Complemento "
-            formControlName="complemento" />
+            formControlName="complemento" 
+            [class.is-invalid]="exibeErro('complemento')"/>
         </div>
       </div>
       <div class="form-row">
         <!-- Cidade -->
         <div class="form-group col-md-8">
-          <label for="inputCity">Cidade<span>*</span></label>
+          <label for="cidade">Cidade<span>*</span></label>
           <input class="form-control" id="cidade" type="string" placeholder="Cidade" formControlName="cidade"
             [class.is-invalid]="exibeErro('cidade')" />
         </div>
         <div class="form-group col-md-4">
           <!-- Estado -->
-          <label for="inputEstado">Estado<span>*</span></label>
+          <label for="estado">Estado<span>*</span></label>
           <select class="form-control" id="estado" type="string" placeholder="Estado" formControlName="estado"
             [class.is-invalid]="exibeErro('estado')">
             <option selected>Escolher...</option>
@@ -109,6 +110,16 @@
             <option>Sergipe</option>
             <option>Tocantins</option>
           </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="latitude">Latitude<span>*</span></label>
+          <input class="form-control" id="latitude" type="string" placeholder="Latitude" formControlName="latitude"
+            [class.is-invalid]="exibeErro('latitude')" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="longitude">Longitude<span>*</span></label>
+          <input class="form-control" id="longitude" type="string" placeholder="Longitude" formControlName="longitude"
+            [class.is-invalid]="exibeErro('longitude')" />
         </div>
       </div>
       <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">

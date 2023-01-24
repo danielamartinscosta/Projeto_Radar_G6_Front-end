@@ -7,6 +7,8 @@ import { Cliente } from '../clientes/clientes.interface';
 import { ClientesService } from '../clientes/clientes.service';
 import { Loja } from '../lojas/lojas.interface';
 import { LojasService } from '../lojas/lojas.service';
+import { Pedido } from '../pedidos/pedidos.interface';
+import { PedidosService } from '../pedidos/pedidos.service';
 import { Product } from '../products/product.interface';
 import { ProductsService } from '../products/products.service';
 Chart.register(...registerables);
@@ -23,6 +25,7 @@ export class HomeComponent implements OnInit {
   qntProducts: number;
   qtdLojas: number;
   qtdCampanhas: number;
+  qtdPedidos: number;
 
   prospeccao = [50, 60 ,80 ,70, 100, 150, 200, 210, 220, 250, 300, 350];
   real = [55, 66 ,88 ,77, 120, 170, 230, 240, 250, 260, 310, 300]
@@ -32,6 +35,7 @@ export class HomeComponent implements OnInit {
     private productService: ProductsService,
     private lojaService: LojasService,
     private campanhaService: CampanhasService,
+    private pedidosService: PedidosService,
     private authService: AuthService
   ) { }
 
@@ -40,6 +44,7 @@ export class HomeComponent implements OnInit {
     this.countClients();
     this.countProducts();
     this.countLojas();
+    this.countCampanhas();
 
     var myChart = new Chart("myChart", {
       type: 'line',
@@ -134,5 +139,17 @@ export class HomeComponent implements OnInit {
 
   onSuccessCampanhas(resp: Campanha[]) {
     this.qtdCampanhas = resp.length;
+  }
+
+
+  countPedidos() {
+    var token = this.authService.getToken();
+    this.campanhaService.pegarCampanha(token).subscribe({
+      next: (resp) => this.onSuccessCampanhas(resp),
+    });
+  }
+
+  onSuccessPedidos(resp: Pedido[]) {
+    this.qtdPedidos = resp.length;
   }
   }

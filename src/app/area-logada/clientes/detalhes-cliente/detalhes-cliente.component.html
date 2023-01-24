@@ -15,10 +15,10 @@
     </div>
     <div *ngIf="!estaCarregando && !erroNoCarregamento">
       <p><b>Nome:</b> {{ cliente.nome }}</p>
-      <p><b>Telefone:</b> {{ cliente.telefone }}</p>
+      <p><b>Telefone:</b> {{ cliente.telefone | phone }}</p>
       <p><b>E-mail:</b> {{ cliente.email }}</p>
-      <p><b>CPF:</b> {{ cliente.cpf }}</p>
-      <p><b>CEP:</b> {{ cliente.cep }}</p>
+      <p><b>CPF:</b> {{ cliente.cpf | cpf }}</p>
+      <p><b>CEP:</b> {{ cliente.cep | cep }}</p>
       <p><b>Endereço:</b> {{ cliente.logradouro }}</p>
       <p><b>Número:</b> {{ cliente.numero }}</p>
       <p><b>Bairro:</b> {{ cliente.bairro }}</p>

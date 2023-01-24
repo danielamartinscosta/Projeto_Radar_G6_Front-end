@@ -35,6 +35,7 @@ export class AuthService {
     return null;
   }
 
+
   getToken() {
     if (this.token) {
       return this.token.replace(/\"/g,""); //regex para ignorar "" deixando o conteudo vazio

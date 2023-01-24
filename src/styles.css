@@ -8,3 +8,5 @@ input[type=number] {
  input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

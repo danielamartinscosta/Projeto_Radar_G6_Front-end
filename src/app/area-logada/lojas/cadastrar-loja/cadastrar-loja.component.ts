@@ -48,8 +48,8 @@ export class CadastrarLojaComponent implements OnInit {
       cidade: ['',Validators.required],
       estado: ['',Validators.required],
       complemento: ['',Validators.required],
-      latitude: [''],
-      longitude: [''],
+      latitude: ['',Validators.required],
+      longitude: ['', Validators.required],
 
     });
   }

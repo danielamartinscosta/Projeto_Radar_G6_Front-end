@@ -37,14 +37,14 @@ const routes: Routes = [
           import('./fluxo-de-caixa/fluxo-de-caixa.module').then(
             (m) => m.FluxoDeCaixaModule
           ),
-      },/*
+      },
       {
         path: 'pedidos',
         loadChildren: () =>
           import('./pedidos/pedidos.module').then(
             (m) => m.PedidosModule
           )
-      },*/
+      },
       {
         path: 'campanhas',
         loadChildren: () =>

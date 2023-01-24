@@ -5,6 +5,7 @@ import { ClientesService } from './../clientes.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
+import { CepService } from '../cep-service';
 
 @Component({
   selector: 'app-cadastrar-cliente',
@@ -23,8 +24,9 @@ export class CadastrarClienteComponent implements OnInit {
     private clientesService: ClientesService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    private cepsService: CepService
+  ) { }
 
   ngOnInit() {
     this.inicializaForm();
@@ -34,6 +36,18 @@ export class CadastrarClienteComponent implements OnInit {
       this.carregarClientes();
     }
   }
+/*
+  buscarEnderecoPorCep(cep: string) {
+    this.cepsService.buscarEnderecoPorCep(cep).subscribe((endereco => this.clienteForm.patchValue));
+        logradouro: endereco.logradouro,
+        bairro: endereco.bairro,
+        cidade: endereco.localidade,
+        estado: endereco.uf
+      });
+    });
+  }*/
+
+
 
   inicializaForm() {
     this.clienteForm = this.formBuilder.group({
@@ -125,7 +139,7 @@ export class CadastrarClienteComponent implements OnInit {
       });
   }
 
-  
+
   onSucessoSalvarCliente() {
     alert('Cliente atualizado com sucesso!');
     this.router.navigate(['clientes']);

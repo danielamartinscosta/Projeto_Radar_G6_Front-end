@@ -14,14 +14,14 @@ import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 import { ListarClientesComponent } from './area-logada/clientes/listar-clientes/listar-clientes.component';
 import { DetalhesClienteComponent } from './area-logada/clientes/detalhes-cliente/detalhes-cliente.component';
-/*import { ListarPedidosComponent } from './area-logada/pedidos/listar-pedidos/listar-pedidos.component';
-import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-pedido.component';*/
+import { ListarPedidosComponent } from './area-logada/pedidos/listar-pedidos/listar-pedidos.component';
 import { ListarLojasComponent } from './area-logada/lojas/listar-lojas/listar-lojas.component';
 import { DetalhesLojaComponent } from './area-logada/lojas/detalhes-loja/detalhes-loja.component';
 import { ListarCampanhasComponent } from './area-logada/campanhas/listar-campanhas/listar-campanhas.component';
 import { DetalhesCampanhaComponent } from './area-logada/campanhas/detalhes-campanha/detalhes-campanha.component';
-
-
+import { DetalhesPedidoComponent } from './area-logada/pedidos/detalhes-pedido/detalhes-produto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 registerLocaleData(ptBr);
 
@@ -33,8 +33,8 @@ registerLocaleData(ptBr);
     DetalhesClienteComponent,
     DetalhesProdutoComponent,
     ListarProdutosComponent,
-    /*ListarPedidosComponent,
-    DetalhesPedidoComponent,*/
+    ListarPedidosComponent,
+    DetalhesPedidoComponent,
     ListarLojasComponent,
     DetalhesLojaComponent,
     ListarCampanhasComponent,
@@ -42,7 +42,7 @@ registerLocaleData(ptBr);
   ],
 
   
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, SharedModule, BrowserAnimationsModule, DragDropModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },

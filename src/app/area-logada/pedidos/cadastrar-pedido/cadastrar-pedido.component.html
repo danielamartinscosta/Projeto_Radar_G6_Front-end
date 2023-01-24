@@ -1,0 +1,55 @@
+<div class="m-3">
+  <h1 class="mb-3 p-3">{{ alterandoPedido() ? "Pedido" : "Novo Pedido" }}</h1>
+
+  <div class="spinner-grow text-danger" role="status" *ngIf="estaCarregando">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>ERRO :(</h2>
+    <button (click)="carregarPedidos()" type="button" class="btn btn-secondary btn-lg">
+      Tentar novamente
+    </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento" class="m-3">
+    <form [formGroup]="pedidoForm" class="container pl-4 pr-4 ml-4 mr-4">
+      <div class="form-row">
+        <!-- Id-->
+        <div class="form-group ">
+          <label for="id"><span></span></label>
+          <input type="Hidden" class="form-control" id="id" placeholder="" formControlName="id"
+            [class.is-invalid]="exibeErro('id')" />
+        </div>
+        <!-- Nome Cliente-->
+        <div class="form-group col-md-6">
+          <label for="clienteId">CPF<span>*</span></label>
+            <select type="number" class="form-control" id="clienteId" placeholder="" formControlName="clienteId"
+            [class.is-invalid]="exibeErro('clienteId')">
+            <option selected>Escolher...</option>
+            <option *ngFor="let cliente of clientes" [ngValue]="cliente.id">
+              {{ cliente.cpf }}</option>
+          </select> 
+        </div>
+        <!-- Valor-->
+        <div class="form-group col-md-6">
+          <label for="valorTotal">Valor Total<span>*</span></label>
+          <input type="number" class="form-control" id="valorTotal" placeholder="R$ 0.00" formControlName="valorTotal"
+            [class.is-invalid]="exibeErro('valor_total')" />
+        </div>
+      </div>
+      <!-- Descrição -->
+      <div class="form-group col-md-6">
+        <label for="dataPedido">Data<span>*</span></label>
+        <input type="date" class="form-control" id="dataPedido" placeholder="" formControlName="dataPedido"
+          [class.is-invalid]="exibeErro('dataPedido')" />
+      </div>      
+      <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
+        {{ alterandoPedido() ? "Atualizar Pedido" : "Cadastrar Pedido" }}
+      </button>
+      <button class="btn btn-secondary mt-2 ml-3" (click)="voltar()">
+        Voltar
+      </button>
+    </form>
+  </div>
+</div>
