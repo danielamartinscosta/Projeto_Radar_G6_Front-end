@@ -2,7 +2,26 @@
 <h1 align="center"> # Projeto_Radar_2.0_G6</h1>
 
 
+# Índice
 
+- [Sobre o Projeto](#--sobre-projeto)
+- [Equipe do Projeto](#--equipe-do-projeto-)
+- [Funcionalidades](#-hammer-funcionalidades)
+- [Tecnologias utilizadas](#--tecnologias-utilizadas)
+- [Organização do Projeto](#-%EF%B8%8F-organização-do-projeto-)
+- [Execução do Projeto](#--execução-o-projeto-)
+- [Visualização do Projeto](#--visualização-do-projeto)
+  - [Tela de Login](#tela-de-login-do-usuário)
+  - [Tela Home(Fluxo de caixa)](#tela-de-fluxo-de-caixa-home)
+  - [Tela de Clientes](#tela-de-clientes)
+    - [Modal - Editar clientes](modal-editar-clientes)
+    - [Modal - Informações do cliente](#modal-informações-do-clientes)
+  - [Tela de Produtos](#tela-de-produtos)
+    - [Modal - Informações do Produto](#modal-informações-do-produto)
+    - [Modal - Editar Produtos](#modal-editar-produto)
+  - [Tela de Pedidos](#tela-de-pedidos)
+    - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
+- [Agradecimentos](#--agradecimentos)
 
 <h2> 👩‍💻  Equipe do projeto 👨‍💻 </h2>
 
@@ -41,7 +60,6 @@
       
 
 
-sql
 teste unit
 
   </a>
@@ -60,6 +78,10 @@ teste unit
 
 
 
+<h2> 🤝 Agradecimentos</h2>
+
+<p>Agradecemos às empresas Febrafar e Farmacas em parceria com a Gama Academy, pela oportunidade de participarmos dessa iniciativa chamada Código do Futuro. Ao nosso Professor Danilo Aparecido, que tem compartilhado conosco, seu vasto conhecimento e nos tornando melhores, pelo menos 1% a cada dia e a Nossa Yellow Belt Carina Aguiar, que sempre se esforça para nos mantermos atualizados e nos ajudar no que precisarmos. </p>
+<p> <strong> A todos vocês, o nosso Muito Obrigado!</strong> </p>
 
 ----
 Referencia de projeto
