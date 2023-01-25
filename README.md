@@ -1,13 +1,12 @@
 
 <h1 align="center"> # Projeto_Radar_2.0_G6</h1>
 
-
 # Índice
 
 - [Sobre o Projeto](#--sobre-projeto)
-- [Equipe do Projeto](#--equipe-do-projeto-)
-- [Funcionalidades](#-hammer-funcionalidades)
-- [Tecnologias utilizadas](#--tecnologias-utilizadas)
+- [Equipe do Projeto](#--equipe-do-projeto--)
+- [Funcionalidades](#---funcionalidades--)
+- [Tecnologias utilizadas](#--tecnologias-utilizadas-)
 - [Organização do Projeto](#-%EF%B8%8F-organização-do-projeto-)
 - [Execução do Projeto](#--execução-o-projeto-)
 - [Visualização do Projeto](#--visualização-do-projeto)
@@ -23,7 +22,7 @@
     - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
 - [Agradecimentos](#--agradecimentos)
 
-<h2> 👩‍💻  Equipe do projeto 👨‍💻 </h2>
+<h2> 👩‍💻 Equipe do projeto 👨‍💻 </h2>
 
 
 | [![Filipe](https://user-images.githubusercontent.com/101750798/214456445-4079c84a-519b-426f-bcfa-6d83443a6d1b.jpeg)](https://www.linkedin.com/in/filipe-magalh%C3%A3es-moreira/ "Filipe Magalhães")  | [![Sérgio](https://user-images.githubusercontent.com/101750798/214447884-785a70bb-e7ea-4706-8b23-308a5f0935cd.png)](https://www.linkedin.com/in/sergio-alves-b3bb91208 "Sergio") | [![daniela](https://user-images.githubusercontent.com/101750798/214454745-b055a296-ee75-4a6c-a728-4abab3f8db65.jpeg)](https://www.linkedin.com/in/daniela-martins-costa "Daniela Martins Costa")  | [![Jonathan](https://user-images.githubusercontent.com/101750798/214448427-37472463-b630-4374-8a8f-8c1dd61c1a4f.png "Jonatan")](https://www.linkedin.com/in/gabriel-santos-cavalcante-b07b7221b/ "Jonatan") |[![Diego](https://user-images.githubusercontent.com/101750798/214455584-440e9b6b-e607-4cff-9c48-6c7e9f19f142.jpeg "Diego Moritz")](https://www.linkedin.com/in/diego-moritz-lopes-7a90aa225/ "Diego") |[![Eric](https://user-images.githubusercontent.com/101750798/214455908-c9d8a27a-d43c-4c5e-9776-f854717d1703.jpeg "Eric")](https://www.linkedin.com/in/eric-nagao-2a59a93b// "Eric Nagao")  |
@@ -50,7 +49,7 @@
 
 ## 
 
-<h2> 💻 Tecnologias utilizadas no projeto: </h2>
+<h2> 💻 Tecnologias utilizadas: </h2>
 
 <table  align= "center">
    <tr>
@@ -62,8 +61,9 @@
 
 teste unit
 
-  </a>
- </tr>
+     
+    </a>
+   </tr>
   </table>
 
 
