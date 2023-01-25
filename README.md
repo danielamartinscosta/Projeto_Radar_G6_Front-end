@@ -15,7 +15,7 @@
 
 ##
 
-<h2>  🛠 Funcionalidades 🛠</h2>
+<h2>  🛠 Funcionalidades 🛠 </h2>
 
 - `Pagina Login:` Página destinada ao login de usuário com senha para acesso as demais páginas do sistema;
 - `Página Home:` Página inicial de apresentação de fluxo de caixa com gráficos e quantidade de cadastros;
@@ -36,14 +36,13 @@
 <table  align= "center">
    <tr>
    <a  href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,git,github"/>
+    <img src="https://skillicons.dev/icons?i=html,css,js,git,github,angular,cs,dotnet,mysql"/>
     <img align="alling" alt="Trello" height="55" width="55" src="https://cdn.icon-icons.com/icons2/3041/PNG/512/trello_logo_icon_189227.png">
       
-angular
-dot net
+
+
 sql
 teste unit
-c chap  c#
 
   </a>
  </tr>
