@@ -24,12 +24,12 @@
         <!-- Nome Cliente-->
         <div class="form-group col-md-6">
           <label for="clienteId">CPF<span>*</span></label>
-            <select type="number" class="form-control" id="clienteId" placeholder="" formControlName="clienteId"
+          <select type="number" class="form-control" id="clienteId" placeholder="" formControlName="clienteId"
             [class.is-invalid]="exibeErro('clienteId')">
             <option selected>Escolher...</option>
             <option *ngFor="let cliente of clientes" [ngValue]="cliente.id">
               {{ cliente.cpf }}</option>
-          </select> 
+          </select>
         </div>
         <!-- Valor-->
         <div class="form-group col-md-6">
@@ -37,13 +37,14 @@
           <input type="number" class="form-control" id="valorTotal" placeholder="R$ 0.00" formControlName="valorTotal"
             [class.is-invalid]="exibeErro('valor_total')" />
         </div>
+
+        <!-- Descrição -->
+        <div class="form-group col-md-6">
+          <label for="dataPedido">Data<span>*</span></label>
+          <input type="date" class="form-control" id="dataPedido" placeholder="" formControlName="dataPedido"
+            [class.is-invalid]="exibeErro('dataPedido')" />
+        </div>
       </div>
-      <!-- Descrição -->
-      <div class="form-group col-md-6">
-        <label for="dataPedido">Data<span>*</span></label>
-        <input type="date" class="form-control" id="dataPedido" placeholder="" formControlName="dataPedido"
-          [class.is-invalid]="exibeErro('dataPedido')" />
-      </div>      
       <button class="btn btn-cadastrar mt-2" (click)="onSubmit()">
         {{ alterandoPedido() ? "Atualizar Pedido" : "Cadastrar Pedido" }}
       </button>

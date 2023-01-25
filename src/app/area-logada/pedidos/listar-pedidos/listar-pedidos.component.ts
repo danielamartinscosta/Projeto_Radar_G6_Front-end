@@ -42,7 +42,7 @@ export class ListarPedidosComponent implements OnInit {
       .pegarPedido(token)
       .pipe(
         take(1),
-        delay(1000),
+        delay(100),
         finalize(() => (this.estaCarregando = false))
       )
       .subscribe({
@@ -70,7 +70,7 @@ export class ListarPedidosComponent implements OnInit {
       .getClientes(token)
       .pipe(
         take(1),
-        delay(1000),
+        delay(100),
         finalize(() => (this.estaCarregando = false))
       )
       .subscribe({

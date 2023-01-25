@@ -44,7 +44,7 @@
             <td class="text-start align-middle pl-5" scope="row d-column"><b>{{ campanha.nome }}</b></td>
             <td class="align-middle pl-5 pr-5">{{ campanha.descricao}}</td>
             <td class="text-start align-middle pl-5 pr-5">
-              {{ campanha.data }}
+              {{ campanha.data | date:'dd/MM/yyyy' }}
             </td>
             <td class="d-flex align-middle justify-content-end">
               <a class="btn btn-info ml-2 mr-2" (click)="verDetalhes(campanha.id)"><svg

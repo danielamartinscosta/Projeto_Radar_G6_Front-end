@@ -73,13 +73,15 @@ export class HomeComponent implements OnInit {
       }
     });
 
+
+
     var myChartPie = new Chart("myChartPie", {
       type: 'pie',
       data: {
-        labels: ['Medicamentos', 'Vitaminas e Suplementos', 'Dermocosméticos', 'Perfumaria'],
+        labels: ['Sul', 'Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste'],
         datasets: [{
           label: 'Vendas - R$',
-          data: [500, 100, 900, 200],
+          data: [],
           borderWidth: 0,
         }],
       },

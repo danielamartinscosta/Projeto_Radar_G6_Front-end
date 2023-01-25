@@ -37,7 +37,7 @@ export class ListarLojasComponent implements OnInit {
       .pegarLoja(token)
       .pipe(
         take(1),
-        delay(1000),
+        delay(100),
         finalize(() => (this.estaCarregando = false))
       )
       .subscribe({

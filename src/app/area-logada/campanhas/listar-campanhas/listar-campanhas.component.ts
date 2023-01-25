@@ -38,7 +38,7 @@ export class ListarCampanhasComponent implements OnInit {
       .pegarCampanha(token)
       .pipe(
         take(1),
-        delay(1000),
+        delay(100),
         finalize(() => (this.estaCarregando = false))
       )
       .subscribe({
