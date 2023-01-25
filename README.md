@@ -1,149 +1,88 @@
-# FRONT - PROJETO RADAR
 
-<div align="center"><h1> :computer: # Equipe: </h1><div>
+<h1 align="center"> # Projeto_Radar_2.0_G6</h1>
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/99arielsr">
-        <img src="https://avatars.githubusercontent.com/u/95944401?v=4" width="100px;" alt="Foto do Ariel Rodrigues"/><br>
-        <sub>
-          <b>Ariel Rodrigues</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Dannytiveron">
-        <img src="https://avatars.githubusercontent.com/u/116685781?v=4" width="100px;" alt="Foto da Danielle Tiveron"/><br>
-        <sub>
-          <b>Danielle Tiveron</b>
-        </sub>
-      </a>
-    </td>
-     <td align="center">
-      <a href="https://github.com/bonilha-rogante">
-        <img src="https://avatars.githubusercontent.com/u/85463234?v=4" width="100px;" alt="Foto do Guilherme Bonilha"/><br>
-        <sub>
-          <b>Guilherme Bonilha</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Luanftg">
-        <img src="https://avatars.githubusercontent.com/u/51548623?v=4" width="100px;" alt="Foto do Luan Fonseca Torralbo Gimenez"/><br>
-        <sub>
-          <b>Luan F. T. Gimenez</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/saa05">
-        <img src="https://avatars.githubusercontent.com/u/114499098?v=4" width="100px;" alt="Foto da Sarah Cardoso"/><br>
-        <sub>
-          <b>Sarah Cardoso</b>
-        </sub>
-      </a>
-    </td>
-      <td align="center">
-      <a href="https://github.com/VictorPnheiro">
-        <img src="https://avatars.githubusercontent.com/u/95004377?v=4" width="100px;" alt="Foto do Victor Pinheiro"/><br>
-        <sub>
-          <b>Victor Pinheiro</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
 
-<hr>
+# Índice
 
-<h2 align="center">Desafio - Código do Futuro - Farmarcas & Gama Academy</h2>
+- [Sobre o Projeto](#--sobre-projeto)
+- [Equipe do Projeto](#--equipe-do-projeto-)
+- [Funcionalidades](#-hammer-funcionalidades)
+- [Tecnologias utilizadas](#--tecnologias-utilizadas)
+- [Organização do Projeto](#-%EF%B8%8F-organização-do-projeto-)
+- [Execução do Projeto](#--execução-o-projeto-)
+- [Visualização do Projeto](#--visualização-do-projeto)
+  - [Tela de Login](#tela-de-login-do-usuário)
+  - [Tela Home(Fluxo de caixa)](#tela-de-fluxo-de-caixa-home)
+  - [Tela de Clientes](#tela-de-clientes)
+    - [Modal - Editar clientes](modal-editar-clientes)
+    - [Modal - Informações do cliente](#modal-informações-do-clientes)
+  - [Tela de Produtos](#tela-de-produtos)
+    - [Modal - Informações do Produto](#modal-informações-do-produto)
+    - [Modal - Editar Produtos](#modal-editar-produto)
+  - [Tela de Pedidos](#tela-de-pedidos)
+    - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
+- [Agradecimentos](#--agradecimentos)
 
-![image](https://user-images.githubusercontent.com/95944401/206023006-da0a5720-91d3-4703-bceb-5a5629e04f6a.png)
+<h2> 👩‍💻  Equipe do projeto 👨‍💻 </h2>
 
-<br>
 
-Plataforma para gerenciamento de negócio e fluxo de caixa do lojista.
+| [![Filipe](https://user-images.githubusercontent.com/101750798/214456445-4079c84a-519b-426f-bcfa-6d83443a6d1b.jpeg)](https://www.linkedin.com/in/filipe-magalh%C3%A3es-moreira/ "Filipe Magalhães")  | [![Sérgio](https://user-images.githubusercontent.com/101750798/214447884-785a70bb-e7ea-4706-8b23-308a5f0935cd.png)](https://www.linkedin.com/in/sergio-alves-b3bb91208 "Sergio") | [![daniela](https://user-images.githubusercontent.com/101750798/214454745-b055a296-ee75-4a6c-a728-4abab3f8db65.jpeg)](https://www.linkedin.com/in/daniela-martins-costa "Daniela Martins Costa")  | [![Jonathan](https://user-images.githubusercontent.com/101750798/214448427-37472463-b630-4374-8a8f-8c1dd61c1a4f.png "Jonatan")](https://www.linkedin.com/in/gabriel-santos-cavalcante-b07b7221b/ "Jonatan") |[![Diego](https://user-images.githubusercontent.com/101750798/214455584-440e9b6b-e607-4cff-9c48-6c7e9f19f142.jpeg "Diego Moritz")](https://www.linkedin.com/in/diego-moritz-lopes-7a90aa225/ "Diego") |[![Eric](https://user-images.githubusercontent.com/101750798/214455908-c9d8a27a-d43c-4c5e-9776-f854717d1703.jpeg "Eric")](https://www.linkedin.com/in/eric-nagao-2a59a93b// "Eric Nagao")  |
+| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+| Filipe M. Moreira  | Sérgio Alves  |  Daniela M. Costa | Jonathan Tenório  | Diego M. Lopes  | Eric M. Nagao  |
 
-<hr>
 
-<h2>💻 Tecnologias utilizadas no projeto: </h2>
-  <table  align= "center">
+
+##
+
+<h2>  🛠 Funcionalidades 🛠 </h2>
+
+- `Pagina Login:` Página destinada ao login de usuário com senha para acesso as demais páginas do sistema;
+- `Página Home:` Página inicial de apresentação de fluxo de caixa com gráficos e quantidade de cadastros;
+- `Página Clientes:` P;
+- `Página cadastro de clientes:`Página que apresenta a lista de clientes cadastrados e opções de cadastro, visualização, edição e exclusão de clientes;
+- `Página cadastro de pedidos dos clientes:`Página que apresenta a lista de pedidos cadastrados e opções de cadastro, visualização, edição e exclusão de pedidos;
+- `Página Produtos:` P;
+- `Página cadastro de produtos:`Página que apresenta a lista de produtos cadastrados e opções de cadastro, visualização, edição e exclusão de produtos;
+- `Página Compras:` P;
+- `Página Campanhas:` P;
+- `Página Lojas:` P;
+
+
+## 
+
+<h2> 💻 Tecnologias utilizadas no projeto: </h2>
+
+<table  align= "center">
    <tr>
    <a  href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,git,github"/>
+    <img src="https://skillicons.dev/icons?i=html,css,js,git,github,angular,cs,dotnet,mysql"/>
+    <img align="alling" alt="Trello" height="55" width="55" src="https://cdn.icon-icons.com/icons2/3041/PNG/512/trello_logo_icon_189227.png">
+      
+
+
+teste unit
+
   </a>
  </tr>
   </table>
-  
-  <hr>
-  
-  ### Instalação das dependências do projeto:
-
-      $ npm i
-  
-
-  
-   <a href="https://github.com/Luanftg/Grupo4-Projeto-Integrador-Codigo-do-Futuro-BackEnd">LINK API</a>
-  <hr>
- 
-<div align="start">
-<h1> 🎯Objetivos </h1>
-
-- [x] Aplicar conhecimentos adquiridos em aula de Angular 9.
-
-- [x] Criação de uma API REST para o sistema com persistência local.
-- [x] Login.
-- [x] Home.
-- [x] Fluxo de Caixa.
-- [x] CRUD das entidades.
-
-## 💾Features
-
-* ✔️ LOGIN DO USUÁRIO.
-![image](https://user-images.githubusercontent.com/95944401/206012880-2e4e0ab9-f816-4acd-8e99-b425f370ead8.png)
-
-<hr>
-
-* ✔️ PÁGINA HOME.
-![image](https://user-images.githubusercontent.com/95944401/206022918-2d77feb9-38f4-4a85-ac0f-5aeb8531b376.png)
 
 
-<hr>
 
-* ✔️ PÁGINA CLIENTES.
-![image](https://user-images.githubusercontent.com/95944401/206030465-23011df9-520b-4459-b718-456403fe290f.png)
-
-* ✔️ CLIENTES: CADASTRO
-![image](https://user-images.githubusercontent.com/95944401/206028465-1d65d8d0-e7ec-41c1-b5b3-61840a16bd08.png)
-* ✔️ CLIENTES: DETALHES
-![image](https://user-images.githubusercontent.com/95944401/206028627-ad1afbb0-cd22-4a38-960a-e504fec50d82.png)
-* ✔️ CLIENTES: EDIÇÃO
-![image](https://user-images.githubusercontent.com/95944401/206028546-e7b67b9f-ffb5-473f-a298-de5ac320a092.png)
-
-<hr>
-
-* ✔️ PÁGINA PRODUTOS.
-![image](https://user-images.githubusercontent.com/95944401/206030541-83354952-c5ae-4bca-a95d-cd3560d49622.png)
-* ✔️ PRODUTOS CADASTRAR. 
-![image](https://user-images.githubusercontent.com/95944401/206029063-d9409635-397a-4ae4-9e29-d7cfc7cce85b.png)
-* ✔️ PRODUTOS DETALHES.
-![image](https://user-images.githubusercontent.com/95944401/206029117-be1921ee-6cf0-48e8-a67a-f1787897f608.png)
-* ✔️ PRODUTOS EDITAR.
-![image](https://user-images.githubusercontent.com/95944401/206028962-24bc01ab-943a-4a11-830a-5e2644045981.png)
-
-<hr>
-
-* ✔️ PÁGINA FLUXO DE CAIXA.
-![image](https://user-images.githubusercontent.com/95944401/206019444-9b660957-b8ed-4d68-be8f-c9451d3838c7.png)
-</div>
-
-<hr>
-  
-  * ✔️ PÁGINA ERROR.
-  ![image](https://user-images.githubusercontent.com/95944401/206029725-65e12e05-2799-4774-bbcc-91e6c6a2a41b.png)
+##
 
 
-## 🤝 Contribuições
 
-<p>Esse projeto só foi possível graças a contribuição de todos os envolvidos, a orientação e suporte dos Professores <a href="https://github.com/torneseumprogramador">Danilo</a> e <a href="https://github.com/vitorfgsantos">Vitor</a> , a equipe de suporte da Gama e principalmente ao esforço e colaboração de toda a equipe ao longo de todo o projeto.<p\>
+
+
+
+
+
+
+<h2> 🤝 Agradecimentos</h2>
+
+<p>Agradecemos às empresas Febrafar e Farmacas em parceria com a Gama Academy, pela oportunidade de participarmos dessa iniciativa chamada Código do Futuro. Ao nosso Professor Danilo Aparecido, que tem compartilhado conosco, seu vasto conhecimento e nos tornando melhores, pelo menos 1% a cada dia e a Nossa Yellow Belt Carina Aguiar, que sempre se esforça para nos mantermos atualizados e nos ajudar no que precisarmos. </p>
+<p> <strong> A todos vocês, o nosso Muito Obrigado!</strong> </p>
+
+----
+Referencia de projeto
+https://github.com/VictorPnheiro/Grupo4-Projeto-Integrador-Front-End
