@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { ListarPedidosProdutosComponent } from './area-logada/pedidosprodutos/listar-pedidosProdutos/listar-pedidosProdutos.component';
 import { DetalhesPedidoProdutoComponent } from './area-logada/pedidosprodutos/detalhes-pedidoProduto/detalhes-pedidoProduto.component';
-
+import { ChartType, GoogleChartsModule, GOOGLE_CHARTS_CONFIG } from 'angular-google-charts';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -45,7 +45,7 @@ registerLocaleData(ptBr);
     DetalhesPedidoProdutoComponent
   ],
 
-  
+
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, SharedModule, BrowserAnimationsModule, DragDropModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
