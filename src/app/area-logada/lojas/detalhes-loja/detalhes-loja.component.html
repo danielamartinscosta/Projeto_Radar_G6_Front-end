@@ -13,6 +13,7 @@
       <p><b>Nome:</b> {{ loja.nome }}</p>
       <p><b>Observação:</b> {{ loja.observacao }}</p>
       <p><b>Endereço:</b> {{ loja.logradouro}}, {{loja.numero}}, {{loja.bairro}}</p>
+      <p><img src="https://maps.googleapis.com/maps/api/staticmap?center={{loja.latitude}},{{loja.longitude}}&zoom=16&size=500x500&markers={{loja.latitude}},{{loja.longitude}}&key=AIzaSyDeHkgTm5W0Ihk5-SUD7kGE9JsT7ah5wCM" allowfullscreen="" /></p>
       <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
     </div>
   </div>

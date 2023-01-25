@@ -14,6 +14,8 @@ export class DetalhesLojaComponent implements OnInit {
 
   loja: Loja;
 
+  
+
   estaCarregando: boolean;
   erroNoCarregamento: boolean;
 
@@ -26,6 +28,8 @@ export class DetalhesLojaComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarLoja();
+
+   
   }
 
   carregarLoja(){
@@ -63,4 +67,10 @@ export class DetalhesLojaComponent implements OnInit {
   voltar(){
     this.router.navigate(['lojas'])
   }
+
+  /*latitude = this.loja.latitude;
+  longitude = "-46.666597197942004";
+
+  url = `https://maps.googleapis.com/maps/api/staticmap?center=${this.latitude},${this.longitude}&zoom=16&size=400x400&markers=${this.latitude},${this.longitude}&key=AIzaSyDeHkgTm5W0Ihk5-SUD7kGE9JsT7ah5wCM`;*/
+
 }
