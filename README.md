@@ -11,15 +11,16 @@
 - [Execução do Projeto](#--execução-o-projeto-)
 - [Visualização do Projeto](#--visualização-do-projeto)
   - [Tela de Login](#tela-de-login-do-usuário)
-  - [Tela Home(Fluxo de caixa)](#tela-de-fluxo-de-caixa-home)
+  - [Tela Home(Fluxo de caixa)](#tela-home)
   - [Tela de Clientes](#tela-de-clientes)
-    - [Modal - Editar clientes](modal-editar-clientes)
-    - [Modal - Informações do cliente](#modal-informações-do-clientes)
-  - [Tela de Produtos](#tela-de-produtos)
-    - [Modal - Informações do Produto](#modal-informações-do-produto)
-    - [Modal - Editar Produtos](#modal-editar-produto)
-  - [Tela de Pedidos](#tela-de-pedidos)
-    - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
+  - [Tela de Produtos](#tela-produtos)
+  - [Tela de Pedidos](#tela-pedidos)
+  - [Tela de Detalhes da Campanha](#tela-de-detalhes---campanha)
+  - [Tela de Cadastro de Loja](#tela-de-cadastro-de-loja)
+  - [Tela de Detalhes de Loja](#tela-de-detalhes-da-loja)
+
+  
+  
 - [Agradecimentos](#--agradecimentos)
 
 ##
@@ -128,8 +129,39 @@ senha: admin123
 
 ##
 
+<h2> 👀 Visualização do Projeto</h2>
 
+<h3>Tela de Login do usuário</h3>
 
+![Screenshot 2023-01-26 at 13-26-11 Radar](https://user-images.githubusercontent.com/84486574/214891946-984a0410-ece6-4441-a97a-4302d07c5d15.png)
+
+<h3>Tela Home</h3>
+
+![Screenshot 2023-01-26 at 12-28-28 Radar](https://user-images.githubusercontent.com/84486574/214892163-87234442-0489-4d68-9c93-8ebecf550559.png)
+
+<h3>Tela de Clientes</h3>
+
+![Screenshot 2023-01-26 at 13-29-03 Radar](https://user-images.githubusercontent.com/84486574/214892413-9177778e-2cc8-491c-ab18-f9ad21a11418.png)
+
+<h3>Tela Produtos</h3>
+
+![Screenshot 2023-01-26 at 12-34-18 Radar](https://user-images.githubusercontent.com/84486574/214892884-2d6848d6-6b31-4a66-ad6d-3d90ab3ac436.png)
+
+<h3>Tela Pedidos</h3>
+
+![Screenshot 2023-01-26 at 13-35-56 Radar](https://user-images.githubusercontent.com/84486574/214894221-e86cf3b8-f08c-4542-bd6c-a4b998cc9b10.png)
+
+<h3>Tela de Detalhes - Campanha</h3>
+
+![Screenshot 2023-01-26 at 13-17-20 Radar](https://user-images.githubusercontent.com/84486574/214893007-49a18cff-aa82-48f9-9b72-cd7739ed4e37.png)
+
+<h3>Tela de Cadastro de Loja</h3>
+
+![Screenshot 2023-01-26 at 13-25-57 Radar](https://user-images.githubusercontent.com/84486574/214893164-5c805c12-7dca-4cb3-8a54-6a31799864a3.png)
+
+<h3>Tela de Detalhes da Loja</h3>
+
+![Screenshot 2023-01-26 at 13-26-04 Radar](https://user-images.githubusercontent.com/84486574/214893293-32cd45df-4659-4336-a4ab-9b83f083cf85.png)
 
 
 <h2> 🤝 Agradecimentos</h2>
