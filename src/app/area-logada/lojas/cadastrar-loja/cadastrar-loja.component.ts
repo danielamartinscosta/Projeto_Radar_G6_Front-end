@@ -47,7 +47,7 @@ export class CadastrarLojaComponent implements OnInit {
       bairro: ['',Validators.required],
       cidade: ['',Validators.required],
       estado: ['',Validators.required],
-      complemento: ['',Validators.required],
+      complemento: [''],
       latitude: ['',Validators.required],
       longitude: ['', Validators.required],
 
