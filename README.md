@@ -52,7 +52,7 @@
 - `Página Produtos:` Página que apresenta a lista de produtos cadastrados e opções de cadastro, visualização, edição e exclusão de produtos;
 - `Página Compras:` Página destinada a criação de pedido de produtos, utilizado como base, a tela de pedidos. Apresenta opções de cadastro, visualização, edição e exclusão de pedidos;
 - `Página Campanhas:` Página destinada a realização de campanhas dando a possibilidade de mover itens na tela, especificando  ;
-- `Página Lojas:` P;
+- `Página Lojas:` Página destinada a exibição e cadastro de lojas;
 
 
 ## 
