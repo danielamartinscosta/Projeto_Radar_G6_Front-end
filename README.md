@@ -62,7 +62,7 @@
 <table  align= "center">
    <tr>
    <a  href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,git,github,angular,cs,dotnet,mysql"/>
+    <img src="https://skillicons.dev/icons?i=html,css,ts,git,github,angular,cs,dotnet,mysql"/>
     <img align="alling" alt="Trello" height="55" width="55" src="https://cdn.icon-icons.com/icons2/3041/PNG/512/trello_logo_icon_189227.png">
       
      
