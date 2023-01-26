@@ -23,6 +23,15 @@
 - [Organização do projeto](#--organiza%C3%A7%C3%A3o-do-projeto-)
 - [Agradecimentos](#--agradecimentos)
 
+##
+
+<br>
+<h2> 👨🏻‍💻 Sobre projeto</h2>
+<p>Este projeto visa o desenvolvimento de uma API em C#, para conectar com o primeiro projeto apresentado à Farmarcas/Gama Academy feito em Angular, utilizando como front-end, o repositório de outro grupo, sendo necessária a adição das páginas de Lojas (com API Google Mpas) e Campanhas (utilizando Drag-and-drop). </p>
+<br>
+
+##
+
 <h2> 👩‍💻 Equipe do projeto 👨‍💻 </h2>
 
 
@@ -36,15 +45,13 @@
 
 <h2>  🛠 Funcionalidades 🛠 </h2>
 
-- `Pagina Login:` Página destinada ao login de usuário com senha para acesso as demais páginas do sistema;
-- `Página Home:` Página inicial de apresentação de fluxo de caixa com gráficos e quantidade de cadastros;
-- `Página Clientes:` P;
-- `Página cadastro de clientes:`Página que apresenta a lista de clientes cadastrados e opções de cadastro, visualização, edição e exclusão de clientes;
+- `Pagina Login:` Página destinada ao login de usuário com senha para acesso as demais páginas do sistema, utilizado autentização via JWT;
+- `Página Home:` Página inicial de apresentação de fluxo de caixa com gráficos e quantidade de cadastros de cada item;
+- `Página de clientes:`Página que apresenta a lista de clientes cadastrados e opções de cadastro, visualização, edição e exclusão de clientes;
 - `Página cadastro de pedidos dos clientes:`Página que apresenta a lista de pedidos cadastrados e opções de cadastro, visualização, edição e exclusão de pedidos;
-- `Página Produtos:` P;
-- `Página cadastro de produtos:`Página que apresenta a lista de produtos cadastrados e opções de cadastro, visualização, edição e exclusão de produtos;
-- `Página Compras:` P;
-- `Página Campanhas:` P;
+- `Página Produtos:` Página que apresenta a lista de produtos cadastrados e opções de cadastro, visualização, edição e exclusão de produtos;
+- `Página Compras:` Página destinada a criação de pedido de produtos, utilizado como base, a tela de pedidos. Apresenta opções de cadastro, visualização, edição e exclusão de pedidos;
+- `Página Campanhas:` Página destinada a realização de campanhas dando a possibilidade de mover itens na tela, especificando  ;
 - `Página Lojas:` P;
 
 
@@ -59,7 +66,7 @@
     <img align="alling" alt="Trello" height="55" width="55" src="https://cdn.icon-icons.com/icons2/3041/PNG/512/trello_logo_icon_189227.png">
       
      
-    </a>
+    
    </tr>
   </table>
 
@@ -70,7 +77,48 @@
 
 <h2> 🗓 Organização do projeto </h2>
 
+<p>Organizamos o projeto utilizando a metodologia ágil Kaban, através da ferramenta Trello. Separamos como Tarefas 'To Do', 'Doing' e 'Done'. <a href="https://trello.com/invite/b/4gk5fv0m/ATTIfd83188797101d8b5b7d71bd97cca68375FFFB17/projetoradar20g6">Clique aqui para visualizar o quadro</a></p>
 
+
+
+##
+
+![Captura de tela 2023-01-26 014501](https://user-images.githubusercontent.com/84486574/214766442-da8f6e19-3da9-4f8b-9544-059010df3a1a.png)
+
+##
+
+<h2> 🎲 Execução o projeto </h2>
+
+
+
+```bash
+# Clone estes repositórios
+$ git clone <https://github.com/danielamartinscosta/Projeto_Radar_G6_Front-end>
+$ git clone <https://github.com/danielamartinscosta/Projeto_Radar_G6_API>
+
+# Acesse a pasta dos projetos no terminal/cmd
+$ cd Projeto_Radar_G6_Front-end
+$ cd Projeto_Radar_G6_API
+
+# Instale as dependências - Front-end
+$ npm install  
+
+# Instale as dependências - Back-end
+$ dotnet build
+
+# incluir variável de ambiente para acesso ao banco de dados
+DATABASE_URL_RADAR_G6="server=localhost;database=radar_g6;uid=SEUUSUARIO;pwd=SUASENHA"
+
+# Execute a aplicação em modo de desenvolvimento
+$ dotnet watch run (para a API)
+$ ng serve (para o angular)
+
+#Login
+usuário: admin@admin
+senha: admin123
+
+
+```
 
 ##
 
