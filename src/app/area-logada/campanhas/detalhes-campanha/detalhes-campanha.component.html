@@ -21,6 +21,7 @@
           <h3>Destaque</h3>
         </li>
         <li class="list-group-item" *ngFor="let produto of confirmList" cdkDrag>
+          <img src="{{produto.foto}}" class="img-person" >
           {{produto.nome}},  {{produto.valor | currency}}</li>
       </ul>
     </div>

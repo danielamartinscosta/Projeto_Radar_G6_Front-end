@@ -4,4 +4,5 @@ export interface Produto {
     descricao: string,
     valor: number,
     quantidadeEstoque: number,
+    foto: string,
 }
