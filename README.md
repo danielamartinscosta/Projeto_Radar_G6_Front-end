@@ -20,6 +20,7 @@
     - [Modal - Editar Produtos](#modal-editar-produto)
   - [Tela de Pedidos](#tela-de-pedidos)
     - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
+- [Organização do projeto](#--organiza%C3%A7%C3%A3o-do-projeto-)
 - [Agradecimentos](#--agradecimentos)
 
 <h2> 👩‍💻 Equipe do projeto 👨‍💻 </h2>
@@ -57,10 +58,6 @@
     <img src="https://skillicons.dev/icons?i=html,css,js,git,github,angular,cs,dotnet,mysql"/>
     <img align="alling" alt="Trello" height="55" width="55" src="https://cdn.icon-icons.com/icons2/3041/PNG/512/trello_logo_icon_189227.png">
       
-
-
-teste unit
-
      
     </a>
    </tr>
@@ -71,8 +68,11 @@ teste unit
 ##
 
 
+<h2> 🗓 Organização do projeto </h2>
 
 
+
+##
 
 
 
