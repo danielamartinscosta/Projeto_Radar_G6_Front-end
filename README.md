@@ -7,7 +7,7 @@
 - [Equipe do Projeto](#--equipe-do-projeto--)
 - [Funcionalidades](#---funcionalidades--)
 - [Tecnologias utilizadas](#--tecnologias-utilizadas-)
-- [Organização do Projeto](#-%EF%B8%8F-organização-do-projeto-)
+- [Organização do Projeto](#--organização-do-projeto-)
 - [Execução do Projeto](#--execução-o-projeto-)
 - [Visualização do Projeto](#--visualização-do-projeto)
   - [Tela de Login](#tela-de-login-do-usuário)
@@ -20,7 +20,6 @@
     - [Modal - Editar Produtos](#modal-editar-produto)
   - [Tela de Pedidos](#tela-de-pedidos)
     - [Modal - Informações do Pedido](#modal-de-informações-do-pedido)
-- [Organização do projeto](#--organiza%C3%A7%C3%A3o-do-projeto-)
 - [Agradecimentos](#--agradecimentos)
 
 ##
@@ -84,6 +83,13 @@
 ##
 
 ![Captura de tela 2023-01-26 014501](https://user-images.githubusercontent.com/84486574/214766442-da8f6e19-3da9-4f8b-9544-059010df3a1a.png)
+
+##
+
+
+<div align="center">
+<a href="https://github.com/danielamartinscosta/Projeto_Radar_G6_API">LINK API</a>
+</div>
 
 ##
 
